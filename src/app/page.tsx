@@ -41,7 +41,38 @@ export default function Home() {
         </li>
       </nav>
       <main>
-        
+        <section id="about">
+          <h2>About me</h2>
+          <p>
+            I'm a software engineer and university student at the University of Manchester.
+          </p>
+          <p>
+            Currently, I'm mostly working on my final year project which encompasses a lot of architectural improvements to{' '}
+            <a href="#saber">Saber</a>.
+          </p>
+        </section>
+
+        <section id="saber">
+          <div className='section-header'>
+            <Image
+              src="https://raw.githubusercontent.com/saber-notes/saber/main/assets/icon/icon_macos.png"
+              alt="Saber"
+              width={1024}
+              height={1024}
+            />
+            <h2>Saber</h2>
+          </div>
+          <p>
+            Saber is a notes app designed for handwriting.
+            </p>
+          <p>
+            It's designed to be as simple as possible, with a focus on the writing experience, while still delivering uniquely useful features.
+          </p>
+          <p>
+            Notably, it can invert your notes (including images) in real time
+            using low-level shaders and <code>RenderObject</code>s.
+          </p>
+        </section>
       </main>
     </>
   )
