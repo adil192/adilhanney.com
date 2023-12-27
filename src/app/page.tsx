@@ -1,7 +1,33 @@
+'use client';
+
+import path from 'path'
+import Markdown from 'react-markdown'
 import Image from 'next/image'
+
 import styles from './page.module.css'
 
-export default function Home() {
+type MdSections = {
+  'about': string,
+  'saber': string,
+};
+
+async function readMd(fileName: string): Promise<string> {
+  const fs = require('fs');
+  const { promises: { readFile } } = fs;
+
+  const filePath = path.join(process.cwd(), 'src/sections', fileName);
+  const contents = (await readFile(filePath)).toString();
+  return contents;
+}
+
+export default async function () {
+  return Home({
+    about: await readMd('about.md'),
+    saber: await readMd('saber.md'),
+  });
+}
+
+function Home({ about, saber }: MdSections) {
   return (
     <>
       <a href='#top'>
@@ -52,13 +78,7 @@ export default function Home() {
             />
             <h2>About me</h2>
           </div>
-          <p>
-            I'm a software engineer and university student at the University of Manchester.
-          </p>
-          <p>
-            Currently, I'm mostly working on my final year project which encompasses a lot of architectural improvements to{' '}
-            <a href="#saber">Saber</a>.
-          </p>
+          <Markdown>{about}</Markdown>
         </section>
 
         <section id="saber">
@@ -71,16 +91,7 @@ export default function Home() {
             />
             <h2>Saber</h2>
           </div>
-          <p>
-            Saber is a notes app designed for handwriting.
-          </p>
-          <p>
-            It's designed to be as simple as possible, with a focus on the writing experience, while still delivering uniquely useful features.
-          </p>
-          <p>
-            Notably, it can invert your notes (including images) in real time
-            using low-level shaders and <code>RenderObject</code>s.
-          </p>
+          <Markdown>{saber}</Markdown>
         </section>
       </main>
     </>

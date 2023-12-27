@@ -18,6 +18,16 @@ const nextConfig = {
             },
         ],
     },
+    webpack: (config, { isServer }) => {
+        // This allows us to use `fs` to access local files.
+        if (!isServer) {
+            config.resolve.fallback = {
+                fs: false,
+            };
+        }
+
+        return config;
+    },
 }
 
 module.exports = nextConfig
