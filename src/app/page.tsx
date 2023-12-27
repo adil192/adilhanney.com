@@ -42,7 +42,16 @@ export default function Home() {
       </nav>
       <main>
         <section id="about">
-          <h2>About me</h2>
+          <div className='section-header'>
+            <Image
+              src="/favicon.svg"
+              alt="Adil's profile picture"
+              width={500}
+              height={500}
+              className='mock-mac-os-icon'
+            />
+            <h2>About me</h2>
+          </div>
           <p>
             I'm a software engineer and university student at the University of Manchester.
           </p>
@@ -64,7 +73,7 @@ export default function Home() {
           </div>
           <p>
             Saber is a notes app designed for handwriting.
-            </p>
+          </p>
           <p>
             It's designed to be as simple as possible, with a focus on the writing experience, while still delivering uniquely useful features.
           </p>

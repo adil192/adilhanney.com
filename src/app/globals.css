@@ -109,6 +109,11 @@ section .section-header img {
   margin-inline-end: 0.5rem;
 }
 
+section .section-header img.mock-mac-os-icon {
+  /* Matches the padding of a macOS icon */
+  padding: 0.2em;
+}
+
 section h2 {
   margin-bottom: 1rem;
 }
