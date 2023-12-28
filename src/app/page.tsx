@@ -65,7 +65,7 @@ export default async function () {
 function Home(sections: MdSections) {
   return (
     <>
-      <a href='#top'>
+      <a href='#about'>
         <Image
           src="/favicon.svg"
           alt="Adil's profile picture"
@@ -74,7 +74,7 @@ function Home(sections: MdSections) {
           className="pfp"
         />
       </a>
-      <header id="top">
+      <header>
         <h1>Adil Hanney</h1>
         <p>Software Engineer</p>
       </header>
