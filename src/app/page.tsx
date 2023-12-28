@@ -7,9 +7,12 @@ import Image from 'next/image'
 import styles from './page.module.css'
 
 type MdSections = {
-  'about': string,
-  'saber': string,
-};
+  id: string,
+  icon: React.ReactNode,
+  header: string,
+  content: string,
+}[]
+
 
 async function readMd(fileName: string): Promise<string> {
   const fs = require('fs');
@@ -21,13 +24,45 @@ async function readMd(fileName: string): Promise<string> {
 }
 
 export default async function () {
-  return Home({
-    about: await readMd('about.md'),
-    saber: await readMd('saber.md'),
-  });
+  return Home([
+    {
+      id: 'about',
+      icon: <Image
+        src="/favicon.svg"
+        alt="Adil's profile picture"
+        width={500}
+        height={500}
+        className='mock-mac-os-icon'
+      />,
+      header: 'About me',
+      content: await readMd('about.md'),
+    },
+    {
+      id: 'saber',
+      icon: <Image
+        src="https://raw.githubusercontent.com/saber-notes/saber/main/assets/icon/icon_macos.png"
+        alt="Saber"
+        width={1024}
+        height={1024}
+      />,
+      header: 'Saber',
+      content: await readMd('saber.md'),
+    },
+    {
+      id: 'ricochlime',
+      icon: <Image
+        src="https://raw.githubusercontent.com/adil192/ricochlime/main/assets/icon/icon_macos.png"
+        alt="Ricochlime"
+        width={1024}
+        height={1024}
+      />,
+      header: 'Ricochlime',
+      content: await readMd('ricochlime.md'),
+    },
+  ])
 }
 
-function Home({ about, saber }: MdSections) {
+function Home(sections: MdSections) {
   return (
     <>
       <a href='#top'>
@@ -67,32 +102,15 @@ function Home({ about, saber }: MdSections) {
         </li>
       </nav>
       <main>
-        <section id="about">
-          <div className='section-header'>
-            <Image
-              src="/favicon.svg"
-              alt="Adil's profile picture"
-              width={500}
-              height={500}
-              className='mock-mac-os-icon'
-            />
-            <h2>About me</h2>
-          </div>
-          <Markdown>{about}</Markdown>
-        </section>
-
-        <section id="saber">
-          <div className='section-header'>
-            <Image
-              src="https://raw.githubusercontent.com/saber-notes/saber/main/assets/icon/icon_macos.png"
-              alt="Saber"
-              width={1024}
-              height={1024}
-            />
-            <h2>Saber</h2>
-          </div>
-          <Markdown>{saber}</Markdown>
-        </section>
+        {sections.map(({ id, icon, header, content }) => (
+          <section key={id} id={id}>
+            <div className='section-header'>
+              {icon}
+              <h2>{header}</h2>
+            </div>
+            <Markdown>{content}</Markdown>
+          </section>
+        ))}
       </main>
     </>
   )
