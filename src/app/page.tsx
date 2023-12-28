@@ -1,5 +1,3 @@
-'use client';
-
 import path from 'path'
 import Markdown from 'react-markdown'
 import Image from 'next/image'
