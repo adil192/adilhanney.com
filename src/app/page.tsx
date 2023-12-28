@@ -9,8 +9,36 @@ type MdSections = {
   icon: React.ReactNode,
   header: string,
   content: string,
+  technologies: Technology[],
 }[]
 
+enum Technology {
+  dart,
+  flutter,
+}
+
+function technologyImage(technology: Technology): React.ReactNode {
+  switch (technology) {
+    case Technology.dart:
+      return <Image
+        key={technology}
+        src="technologies/dart.svg"
+        alt={Technology[technology]}
+        width={32}
+        height={32}
+        className='mock-mac-os-icon'
+      />
+    case Technology.flutter:
+      return <Image
+        key={technology}
+        src="technologies/flutter.svg"
+        alt={Technology[technology]}
+        width={27.0667}
+        height={32}
+        className='mock-mac-os-icon'
+      />
+  }
+}
 
 async function readMd(fileName: string): Promise<string> {
   const fs = require('fs');
@@ -34,6 +62,7 @@ export default async function AsyncHome() {
       />,
       header: 'About me',
       content: await readMd('about.md'),
+      technologies: [],
     },
     {
       id: 'saber',
@@ -45,6 +74,7 @@ export default async function AsyncHome() {
       />,
       header: 'Saber',
       content: await readMd('saber.md'),
+      technologies: [Technology.dart, Technology.flutter],
     },
     {
       id: 'ricochlime',
@@ -56,6 +86,7 @@ export default async function AsyncHome() {
       />,
       header: 'Ricochlime',
       content: await readMd('ricochlime.md'),
+      technologies: [Technology.dart, Technology.flutter],
     },
   ])
 }
@@ -100,11 +131,14 @@ function Home(sections: MdSections) {
         </li>
       </nav>
       <main>
-        {sections.map(({ id, icon, header, content }) => (
+        {sections.map(({ id, icon, header, content, technologies }) => (
           <section key={id} id={id}>
             <div className='section-header'>
               {icon}
               <h2>{header}</h2>
+              <div className='technologies'>
+                {technologies.map(technology => technologyImage(technology))}
+              </div>
             </div>
             <Markdown>{content}</Markdown>
           </section>

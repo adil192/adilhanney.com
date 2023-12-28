@@ -123,6 +123,10 @@ section .section-header img.mock-mac-os-icon {
   padding: 0.2em;
 }
 
+section .section-header h2 {
+  flex: 1;
+}
+
 section h2 {
   margin-bottom: 1rem;
 }
