@@ -28,7 +28,7 @@ export default async function () {
     {
       id: 'about',
       icon: <Image
-        src="/favicon.svg"
+        src="favicon.svg"
         alt="Adil's profile picture"
         width={500}
         height={500}
@@ -67,7 +67,7 @@ function Home(sections: MdSections) {
     <>
       <a href='#about'>
         <Image
-          src="/favicon.svg"
+          src="favicon.svg"
           alt="Adil's profile picture"
           width={500}
           height={500}
