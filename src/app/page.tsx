@@ -33,7 +33,7 @@ function technologyImage(technology: Technology): React.ReactNode {
         key={technology}
         src="technologies/flutter.svg"
         alt={Technology[technology]}
-        width={27.0667}
+        width={32 * 839 / 1039}
         height={32}
         className='mock-mac-os-icon'
       />
@@ -98,8 +98,8 @@ function Home(sections: MdSections) {
         <Image
           src="favicon.svg"
           alt="Adil's profile picture"
-          width={500}
-          height={500}
+          width={96}
+          height={100.85}
           className="pfp"
         />
       </a>
@@ -113,8 +113,8 @@ function Home(sections: MdSections) {
             <Image
               src="https://raw.githubusercontent.com/saber-notes/saber/main/assets/icon/icon_macos.png"
               alt="Saber"
-              width={1024}
-              height={1024}
+              width={80}
+              height={80}
             />
           </a>
         </li>
@@ -123,8 +123,8 @@ function Home(sections: MdSections) {
             <Image
               src="https://raw.githubusercontent.com/adil192/ricochlime/main/assets/icon/icon_macos.png"
               alt="Ricochlime"
-              width={1024}
-              height={1024}
+              width={80}
+              height={80}
             />
           </a>
 
