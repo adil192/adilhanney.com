@@ -2,6 +2,8 @@ import path from 'path'
 import Markdown from 'react-markdown'
 import Image from 'next/image'
 
+import { Technology, TechnologyIcon } from './_components/technology';
+
 import styles from './page.module.css'
 
 type MdSections = {
@@ -11,34 +13,6 @@ type MdSections = {
   content: string,
   technologies: Technology[],
 }[]
-
-enum Technology {
-  dart,
-  flutter,
-}
-
-function technologyImage(technology: Technology): React.ReactNode {
-  switch (technology) {
-    case Technology.dart:
-      return <Image
-        key={technology}
-        src="technologies/dart.svg"
-        alt={Technology[technology]}
-        width={32}
-        height={32}
-        className='mock-mac-os-icon'
-      />
-    case Technology.flutter:
-      return <Image
-        key={technology}
-        src="technologies/flutter.svg"
-        alt={Technology[technology]}
-        width={32 * 839 / 1039}
-        height={32}
-        className='mock-mac-os-icon'
-      />
-  }
-}
 
 async function readMd(fileName: string): Promise<string> {
   const fs = require('fs');
@@ -137,7 +111,7 @@ function Home(sections: MdSections) {
               {icon}
               <h2>{header}</h2>
               <div className='technologies'>
-                {technologies.map(technology => technologyImage(technology))}
+                {technologies.map(technology => <TechnologyIcon key={technology} technology={technology} />)}
               </div>
             </div>
             <Markdown>{content}</Markdown>
