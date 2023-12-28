@@ -108,8 +108,18 @@ section {
   margin-bottom: 2rem;
 }
 
+section h2 {
+  margin-bottom: 1.5rem;
+}
+
+section p {
+  margin-bottom: 0.75rem;
+}
+
 section .section-header {
   display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 1.5rem;
 }
 
 section .section-header img {
@@ -125,12 +135,5 @@ section .section-header img.mock-mac-os-icon {
 
 section .section-header h2 {
   flex: 1;
-}
-
-section h2 {
-  margin-bottom: 1rem;
-}
-
-section p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
