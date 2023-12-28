@@ -48,7 +48,7 @@ a {
 
 header {
   align-self: center;
-  padding-inline: 1rem;
+  padding: 1rem;
 }
 
 header h1+p {
