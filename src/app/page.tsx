@@ -21,7 +21,7 @@ async function readMd(fileName: string): Promise<string> {
   return contents;
 }
 
-export default async function () {
+export default async function AsyncHome() {
   return Home([
     {
       id: 'about',
