@@ -48,7 +48,7 @@ export default async function AsyncHome() {
       />,
       header: 'Saber',
       content: await readMd('saber.md'),
-      technologies: [Technology.dart, Technology.flutter],
+      technologies: [Technology.flutter],
     },
     {
       id: 'ricochlime',
@@ -60,7 +60,7 @@ export default async function AsyncHome() {
       />,
       header: 'Ricochlime',
       content: await readMd('ricochlime.md'),
-      technologies: [Technology.dart, Technology.flutter],
+      technologies: [Technology.flutter],
     },
   ])
 }
