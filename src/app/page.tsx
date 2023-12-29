@@ -82,6 +82,20 @@ export default async function AsyncHome() {
       date: 'June 2022'
     },
     {
+      id: 'BlackboardTheme',
+      icon: <Image
+        src="projects/BlackboardTheme.webp"
+        alt="Blackboard Theme"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'Blackboard Theme',
+      technologies: [Technology.scss, Technology.js],
+      content: await readMd('BlackboardTheme.md'),
+      date: 'May 2022',
+    },
+    {
       id: 'nonogram',
       icon: <Image
         src="projects/nonogram.webp"
