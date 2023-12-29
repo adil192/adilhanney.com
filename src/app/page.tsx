@@ -62,6 +62,215 @@ export default async function AsyncHome() {
       content: await readMd('ricochlime.md'),
       technologies: [Technology.flutter],
     },
+    {
+      id: 'quintle',
+      icon: <Image
+        src="projects/quintle.png"
+        alt="Quintle"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'Quintle',
+      content: await readMd('quintle.md'),
+      technologies: [Technology.pwa],
+    },
+    {
+      id: 'nonogram',
+      icon: <Image
+        src="projects/nonogram.webp"
+        alt="Nonogram"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'Nonogram',
+      content: await readMd('nonogram.md'),
+      technologies: [Technology.pwa],
+    },
+    {
+      id: 'timing',
+      icon: <Image
+        src="projects/timing.svg"
+        alt="Timing Flutter"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'Timing Trainer',
+      content: await readMd('timing.md'),
+      technologies: [Technology.flutter, Technology.pwa],
+    },
+    {
+      id: 'social',
+      icon: <Image
+        // TODO(adil192): Make a better icon
+        src="projects/blank.svg"
+        alt="Social"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'Social',
+      content: await readMd('social.md'),
+      technologies: [Technology.pwa],
+    },
+    {
+      id: 's-pen',
+      icon: <Image
+        src="projects/spencover.webp"
+        alt="S Pen"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'S Pen',
+      content: await readMd('s-pen.md'),
+      technologies: [],
+    },
+    {
+      id: 'fabrik',
+      icon: <Image
+        src="projects/fabrik.webp"
+        alt="Fabrik"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'Fabrik',
+      content: await readMd('fabrik.md'),
+      technologies: [],
+    },
+    {
+      id: 'clocks',
+      icon: <Image
+        src="projects/clocks.webp"
+        alt="Clocks"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'Clocks',
+      content: await readMd('clocks.md'),
+      technologies: [],
+    },
+    {
+      id: 'zombies',
+      icon: <Image
+        src="projects/zombies.webp"
+        alt="Zombies"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'Zombies',
+      content: await readMd('zombies.md'),
+      technologies: [],
+    },
+    {
+      id: 'calculator',
+      icon: <Image
+        src="projects/calculator.webp"
+        alt="Calculator"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'Calculator',
+      content: await readMd('calculator.md'),
+      technologies: [],
+    },
+    {
+      id: 'loffice-365',
+      icon: <Image
+        src="projects/loffice-365.webp"
+        alt="loffice-365"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'loffice-365',
+      content: await readMd('loffice-365.md'),
+      technologies: [],
+    },
+    {
+      id: 'SamsungAppsPatcher',
+      icon: <Image
+        src="projects/SamsungAppsPatcher.webp"
+        alt="Samsung Apps Patcher"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'Samsung Apps Patcher',
+      content: await readMd('SamsungAppsPatcher.md'),
+      technologies: [],
+    },
+    {
+      id: 'S20Debloat',
+      icon: <Image
+        src="projects/S20Debloat.webp"
+        alt="S20 Debloat"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'S20 Debloat',
+      content: await readMd('S20Debloat.md'),
+      technologies: [],
+    },
+    {
+      id: 'collatz',
+      icon: <Image
+        src="projects/collatz.webp"
+        alt="Collatz"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'Collatz',
+      content: await readMd('collatz.md'),
+      technologies: [],
+    },
+    {
+      id: 'colours',
+      icon: <Image
+        src="projects/colours.webp"
+        alt="Colours"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'Colours',
+      content: await readMd('colours.md'),
+      technologies: [],
+    },
+    {
+      id: 'repo',
+      icon: <Image
+        src="projects/repo.webp"
+        alt="Repo"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'Repo',
+      content: await readMd('repo.md'),
+      technologies: [],
+    },
+    {
+      id: 'LIFE',
+      icon: <Image
+        src="projects/LIFE.webp"
+        alt="LIFE"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'LIFE',
+      content: await readMd('LIFE.md'),
+      technologies: [],
+    },
   ])
 }
 
@@ -82,27 +291,15 @@ function Home(sections: MdSections) {
         <p>Software Engineer</p>
       </header>
       <nav>
-        <li>
-          <a href="#saber">
-            <Image
-              src="https://raw.githubusercontent.com/saber-notes/saber/main/assets/icon/icon_macos.png"
-              alt="Saber"
-              width={80}
-              height={80}
-            />
-          </a>
-        </li>
-        <li>
-          <a href='#ricochlime'>
-            <Image
-              src="https://raw.githubusercontent.com/adil192/ricochlime/main/assets/icon/icon_macos.png"
-              alt="Ricochlime"
-              width={80}
-              height={80}
-            />
-          </a>
-
-        </li>
+        {sections
+          .filter(({ id }) => id !== 'about')
+          .map(({ id, icon }) => (
+            <li key={id}>
+              <a href={`#${id}`}>
+                {icon}
+              </a>
+            </li>
+          ))}
       </nav>
       <main>
         {sections.map(({ id, icon, header, content, technologies }) => (

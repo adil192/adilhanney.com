@@ -45,6 +45,12 @@ code {
   font-family: 'Fira Mono', 'Droid Sans Mono', 'monospace', monospace;
 }
 
+img.mock-mac-os-icon {
+  /* Matches the padding of a macOS icon */
+  padding: calc(var(--img-width) / 10);
+  border-radius: calc(var(--img-width) * 0.25);
+}
+
 .pfp {
   width: var(--sidebar-width);
   max-width: var(--sidebar-max-width);
@@ -79,8 +85,9 @@ nav li {
 }
 
 nav li img {
-  width: var(--sidebar-width);
-  max-width: var(--sidebar-max-width);
+  --img-width: min(var(--sidebar-width),
+      var(--sidebar-max-width));
+  width: var(--img-width);
   height: auto;
 }
 
@@ -123,14 +130,15 @@ section .section-header {
 }
 
 section .section-header img {
-  height: 2em;
+  --img-width: 2em;
+  height: var(--img-width);
   width: auto;
+  max-width: calc(var(--img-width) * 1.5);
   margin-inline-end: 0.5rem;
 }
 
-section .section-header img.mock-mac-os-icon {
-  /* Matches the padding of a macOS icon */
-  padding: 0.2em;
+section .section-header .technologies>*:last-child img {
+  margin-inline-end: 0;
 }
 
 section .section-header h2 {
