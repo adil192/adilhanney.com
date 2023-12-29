@@ -115,6 +115,22 @@ main {
     overflow: visible;
     height: auto;
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-style: italic;
+    opacity: 0.8;
+    font-weight: 300;
+  }
+
+  a[href^="#"]::after,
+  section .section-header .technologies a::after {
+    content: "";
+  }
 }
 
 section {
