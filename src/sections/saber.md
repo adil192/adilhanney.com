@@ -1,4 +1,4 @@
-Saber is my notes app designed for handwriting. It was my first non-trivial Flutter project, and I've been working on it since July 2022.
+Saber is the notes app built for handwriting. It was my first non-trivial Flutter project, and I've been working on it since July 2022.
 
 I'd been writing digital notes since 2020, and the only app that suited my needs was [Samsung Notes](https://www.samsung.com/uk/apps/samsung-notes/).
 Unfortunately, it was only compatible with Samsung's Android devices and select Windows devices. Additionally, it didn't work on Samsung's Android devices with custom firmware, such as LineageOS, which I was using at the time on my Samsung phone. I wanted to be able to access my notes on all my devices, regardless of the operating system or manufacturer.
