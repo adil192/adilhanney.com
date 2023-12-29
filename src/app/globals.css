@@ -49,6 +49,9 @@ img.mock-mac-os-icon {
   /* Matches the padding of a macOS icon */
   padding: calc(var(--img-width) / 10);
   border-radius: calc(var(--img-width) * 0.25);
+
+  --ds: calc(var(--img-width) / 50);
+  filter: drop-shadow(var(--ds) var(--ds) var(--ds) rgba(0, 0, 0, 0.2));
 }
 
 .pfp {
