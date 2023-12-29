@@ -123,6 +123,10 @@ section p {
   margin-bottom: 0.75rem;
 }
 
+section .date {
+  text-align: end;
+}
+
 section .section-header {
   display: flex;
   flex-flow: row wrap;

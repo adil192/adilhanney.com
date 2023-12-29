@@ -12,6 +12,7 @@ type MdSections = {
   header: string,
   technologies: Technology[],
   content: string,
+  date: string | undefined,
 }[]
 
 async function readMd(fileName: string): Promise<string> {
@@ -37,6 +38,7 @@ export default async function AsyncHome() {
       header: 'About me',
       technologies: [],
       content: await readMd('about.md'),
+      date: undefined,
     },
     {
       id: 'saber',
@@ -49,6 +51,7 @@ export default async function AsyncHome() {
       header: 'Saber',
       technologies: [Technology.flutter],
       content: await readMd('saber.md'),
+      date: 'July 2022',
     },
     {
       id: 'ricochlime',
@@ -61,32 +64,7 @@ export default async function AsyncHome() {
       header: 'Ricochlime',
       technologies: [Technology.flutter],
       content: await readMd('ricochlime.md'),
-    },
-    {
-      id: 'quintle',
-      icon: <Image
-        src="projects/quintle.png"
-        alt="Quintle"
-        width={1024}
-        height={1024}
-        className='mock-mac-os-icon'
-      />,
-      header: 'Quintle',
-      technologies: [Technology.pwa],
-      content: await readMd('quintle.md'),
-    },
-    {
-      id: 'nonogram',
-      icon: <Image
-        src="projects/nonogram.webp"
-        alt="Nonogram"
-        width={1024}
-        height={1024}
-        className='mock-mac-os-icon'
-      />,
-      header: 'Nonogram',
-      technologies: [Technology.pwa],
-      content: await readMd('nonogram.md'),
+      date: 'August 2023'
     },
     {
       id: 'timing',
@@ -100,6 +78,21 @@ export default async function AsyncHome() {
       header: 'Timing Trainer',
       technologies: [Technology.flutter, Technology.pwa],
       content: await readMd('timing.md'),
+      date: 'June 2022'
+    },
+    {
+      id: 'nonogram',
+      icon: <Image
+        src="projects/nonogram.webp"
+        alt="Nonogram"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'Nonogram',
+      technologies: [Technology.pwa],
+      content: await readMd('nonogram.md'),
+      date: 'May 2022',
     },
     {
       id: 'social',
@@ -114,6 +107,21 @@ export default async function AsyncHome() {
       header: 'Social',
       technologies: [Technology.pwa],
       content: await readMd('social.md'),
+      date: 'April 2022',
+    },
+    {
+      id: 'quintle',
+      icon: <Image
+        src="projects/quintle.png"
+        alt="Quintle"
+        width={1024}
+        height={1024}
+        className='mock-mac-os-icon'
+      />,
+      header: 'Quintle',
+      technologies: [Technology.pwa],
+      content: await readMd('quintle.md'),
+      date: 'February 2022',
     },
     {
       id: 's-pen',
@@ -127,6 +135,7 @@ export default async function AsyncHome() {
       header: 'S Pen',
       technologies: [],
       content: await readMd('s-pen.md'),
+      date: 'February 2022',
     },
     {
       id: 'fabrik',
@@ -140,6 +149,7 @@ export default async function AsyncHome() {
       header: 'Fabrik',
       technologies: [],
       content: await readMd('fabrik.md'),
+      date: 'January 2022',
     },
     {
       id: 'clocks',
@@ -153,6 +163,7 @@ export default async function AsyncHome() {
       header: 'Clocks',
       technologies: [],
       content: await readMd('clocks.md'),
+      date: 'November 2021',
     },
     {
       id: 'zombies',
@@ -166,6 +177,7 @@ export default async function AsyncHome() {
       header: 'Zombies',
       technologies: [],
       content: await readMd('zombies.md'),
+      date: 'November 2021',
     },
     {
       id: 'calculator',
@@ -179,6 +191,7 @@ export default async function AsyncHome() {
       header: 'Calculator',
       technologies: [],
       content: await readMd('calculator.md'),
+      date: 'November 2021',
     },
     {
       id: 'loffice-365',
@@ -192,6 +205,7 @@ export default async function AsyncHome() {
       header: 'loffice-365',
       technologies: [],
       content: await readMd('loffice-365.md'),
+      date: 'October 2021',
     },
     {
       id: 'SamsungAppsPatcher',
@@ -205,6 +219,7 @@ export default async function AsyncHome() {
       header: 'Samsung Apps Patcher',
       technologies: [],
       content: await readMd('SamsungAppsPatcher.md'),
+      date: 'June 2021',
     },
     {
       id: 'S20Debloat',
@@ -218,6 +233,7 @@ export default async function AsyncHome() {
       header: 'S20 Debloat',
       technologies: [],
       content: await readMd('S20Debloat.md'),
+      date: 'May 2021',
     },
     {
       id: 'collatz',
@@ -231,6 +247,7 @@ export default async function AsyncHome() {
       header: 'Collatz',
       technologies: [],
       content: await readMd('collatz.md'),
+      date: 'June 2020',
     },
     {
       id: 'colours',
@@ -244,6 +261,7 @@ export default async function AsyncHome() {
       header: 'Colours',
       technologies: [],
       content: await readMd('colours.md'),
+      date: 'before June 2020',
     },
     {
       id: 'repo',
@@ -257,6 +275,7 @@ export default async function AsyncHome() {
       header: 'Repo',
       technologies: [],
       content: await readMd('repo.md'),
+      date: 'before June 2020',
     },
     {
       id: 'LIFE',
@@ -270,6 +289,7 @@ export default async function AsyncHome() {
       header: 'LIFE',
       technologies: [],
       content: await readMd('LIFE.md'),
+      date: 'before June 2020',
     },
   ])
 }
@@ -302,7 +322,7 @@ function Home(sections: MdSections) {
           ))}
       </nav>
       <main>
-        {sections.map(({ id, icon, header, content, technologies }) => (
+        {sections.map(({ id, icon, header, technologies, content, date }) => (
           <section key={id} id={id}>
             <div className='section-header'>
               {icon}
@@ -312,6 +332,7 @@ function Home(sections: MdSections) {
               </div>
             </div>
             <Markdown>{content}</Markdown>
+            {date && <p className='date'>{date}</p>}
           </section>
         ))}
       </main>
