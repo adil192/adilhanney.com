@@ -1,5 +1,6 @@
 import path from 'path'
 import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import Image from 'next/image'
 
 import { Technology, TechnologyIcon } from './_components/technology';
@@ -331,7 +332,7 @@ function Home(sections: MdSections) {
                 {technologies.map(technology => <TechnologyIcon key={technology} technology={technology} />)}
               </div>
             </div>
-            <Markdown>{content}</Markdown>
+            <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
             {date && <p className='date'>{date}</p>}
           </section>
         ))}
