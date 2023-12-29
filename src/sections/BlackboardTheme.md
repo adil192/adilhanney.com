@@ -5,12 +5,13 @@ but as it grew, I began to theme more of my university's websites and then start
 Every time I encountered an issue, or saw something that I found difficult to use, I would try to fix it.
 
 One of the most improved areas is the video player. The course content videos were difficult to use as you had to use the mouse to click on the buttons to play/pause, click somewhere on the razor-thin progress bar to rewind, and go through a series of popups and dialogs to configure captions at the start of every video!
+I emailed the university about this, but didn't get a response, so I decided to fix it myself.
 I added the standard keyboard shortcuts for play/pause, rewind/fast-forward, volume control, captions, and fullscreen.
 I also set sensible defaults, including a larger font size, better fonts, and a smaller width so your eyes don't have to move as far to read the captions.
 I also changed the upscaling algorithm to favour sharpness over smoothness, as the fuzziness of lower quality videos was harder to read.
 
 Another notable area is the course selection screen. The default layout was a compacted list of courses with very long names, which made it difficult to find the course you wanted.
-I added a grid layout with course cards, which stay in the same position over time to help you remember where your courses are.
+I added a grid layout with course cards which stay in the same position over time to help you remember where your courses are.
 I assigned each of my modules and departments an image which is displayed on the card, and left instructions on how to change the image for your own courses.
 I also added a feature that dims courses from semester 1 when you're in semester 2, to help you focus on the courses you're currently studying.
 
