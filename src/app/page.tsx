@@ -10,8 +10,8 @@ type MdSections = {
   id: string,
   icon: React.ReactNode,
   header: string,
-  content: string,
   technologies: Technology[],
+  content: string,
 }[]
 
 async function readMd(fileName: string): Promise<string> {
@@ -35,8 +35,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'About me',
-      content: await readMd('about.md'),
       technologies: [],
+      content: await readMd('about.md'),
     },
     {
       id: 'saber',
@@ -47,8 +47,8 @@ export default async function AsyncHome() {
         height={1024}
       />,
       header: 'Saber',
-      content: await readMd('saber.md'),
       technologies: [Technology.flutter],
+      content: await readMd('saber.md'),
     },
     {
       id: 'ricochlime',
@@ -59,8 +59,8 @@ export default async function AsyncHome() {
         height={1024}
       />,
       header: 'Ricochlime',
-      content: await readMd('ricochlime.md'),
       technologies: [Technology.flutter],
+      content: await readMd('ricochlime.md'),
     },
     {
       id: 'quintle',
@@ -72,8 +72,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'Quintle',
-      content: await readMd('quintle.md'),
       technologies: [Technology.pwa],
+      content: await readMd('quintle.md'),
     },
     {
       id: 'nonogram',
@@ -85,8 +85,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'Nonogram',
-      content: await readMd('nonogram.md'),
       technologies: [Technology.pwa],
+      content: await readMd('nonogram.md'),
     },
     {
       id: 'timing',
@@ -98,8 +98,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'Timing Trainer',
-      content: await readMd('timing.md'),
       technologies: [Technology.flutter, Technology.pwa],
+      content: await readMd('timing.md'),
     },
     {
       id: 'social',
@@ -112,8 +112,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'Social',
-      content: await readMd('social.md'),
       technologies: [Technology.pwa],
+      content: await readMd('social.md'),
     },
     {
       id: 's-pen',
@@ -125,8 +125,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'S Pen',
-      content: await readMd('s-pen.md'),
       technologies: [],
+      content: await readMd('s-pen.md'),
     },
     {
       id: 'fabrik',
@@ -138,8 +138,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'Fabrik',
-      content: await readMd('fabrik.md'),
       technologies: [],
+      content: await readMd('fabrik.md'),
     },
     {
       id: 'clocks',
@@ -151,8 +151,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'Clocks',
-      content: await readMd('clocks.md'),
       technologies: [],
+      content: await readMd('clocks.md'),
     },
     {
       id: 'zombies',
@@ -164,8 +164,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'Zombies',
-      content: await readMd('zombies.md'),
       technologies: [],
+      content: await readMd('zombies.md'),
     },
     {
       id: 'calculator',
@@ -177,8 +177,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'Calculator',
-      content: await readMd('calculator.md'),
       technologies: [],
+      content: await readMd('calculator.md'),
     },
     {
       id: 'loffice-365',
@@ -190,8 +190,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'loffice-365',
-      content: await readMd('loffice-365.md'),
       technologies: [],
+      content: await readMd('loffice-365.md'),
     },
     {
       id: 'SamsungAppsPatcher',
@@ -203,8 +203,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'Samsung Apps Patcher',
-      content: await readMd('SamsungAppsPatcher.md'),
       technologies: [],
+      content: await readMd('SamsungAppsPatcher.md'),
     },
     {
       id: 'S20Debloat',
@@ -216,8 +216,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'S20 Debloat',
-      content: await readMd('S20Debloat.md'),
       technologies: [],
+      content: await readMd('S20Debloat.md'),
     },
     {
       id: 'collatz',
@@ -229,8 +229,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'Collatz',
-      content: await readMd('collatz.md'),
       technologies: [],
+      content: await readMd('collatz.md'),
     },
     {
       id: 'colours',
@@ -242,8 +242,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'Colours',
-      content: await readMd('colours.md'),
       technologies: [],
+      content: await readMd('colours.md'),
     },
     {
       id: 'repo',
@@ -255,8 +255,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'Repo',
-      content: await readMd('repo.md'),
       technologies: [],
+      content: await readMd('repo.md'),
     },
     {
       id: 'LIFE',
@@ -268,8 +268,8 @@ export default async function AsyncHome() {
         className='mock-mac-os-icon'
       />,
       header: 'LIFE',
-      content: await readMd('LIFE.md'),
       technologies: [],
+      content: await readMd('LIFE.md'),
     },
   ])
 }
