@@ -65,13 +65,13 @@ img.mock-mac-os-icon {
 header {
   align-self: center;
   padding: 1rem;
-}
 
-header h1+p {
-  font-size: 1.5rem;
-  font-weight: 300;
-  font-style: italic;
-  margin-top: -0.25rem;
+  & h1+p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-top: -0.25rem;
+  }
 }
 
 nav {
@@ -81,17 +81,17 @@ nav {
 
   overflow-y: auto;
   scroll-behavior: smooth;
-}
 
-nav li {
-  list-style: none;
-}
+  & li {
+    list-style: none;
 
-nav li img {
-  --img-width: min(var(--sidebar-width),
-      var(--sidebar-max-width));
-  width: var(--img-width);
-  height: auto;
+    & img {
+      --img-width: min(var(--sidebar-width),
+          var(--sidebar-max-width));
+      width: var(--img-width);
+      height: auto;
+    }
+  }
 }
 
 main {
@@ -142,39 +142,39 @@ section {
   border-radius: var(--border-radius);
   max-width: 70rem;
   margin-bottom: 2rem;
-}
 
-section h2 {
-  margin-bottom: 1.5rem;
-}
+  & h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  & p {
+    margin-bottom: 0.75rem;
+  }
+  
+  & .date {
+    text-align: end;
+  }
+  
+  & .section-header {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 1.5rem;
 
-section p {
-  margin-bottom: 0.75rem;
-}
+    & img {
+      --img-width: 2em;
+      height: var(--img-width);
+      width: auto;
+      max-width: calc(var(--img-width) * 1.5);
+      margin-inline-end: 0.5rem;
+    }
 
-section .date {
-  text-align: end;
-}
+    & h2 {
+      flex: 1;
+      margin-bottom: 0;
+    }
 
-section .section-header {
-  display: flex;
-  flex-flow: row wrap;
-  margin-bottom: 1.5rem;
-}
-
-section .section-header img {
-  --img-width: 2em;
-  height: var(--img-width);
-  width: auto;
-  max-width: calc(var(--img-width) * 1.5);
-  margin-inline-end: 0.5rem;
-}
-
-section .section-header .technologies>*:last-child img {
-  margin-inline-end: 0;
-}
-
-section .section-header h2 {
-  flex: 1;
-  margin-bottom: 0;
+    & .technologies>*:last-child img {
+      margin-inline-end: 0;
+    }
+  }
 }
