@@ -178,3 +178,9 @@ section {
     }
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  img[src$="pwa.svg"] {
+    filter: invert(1) hue-rotate(166deg);
+  }
+}
