@@ -3,7 +3,14 @@ import { Inter } from 'next/font/google'
 import '/public/material-theme/theme.css';
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  preload: true,
+  fallback: [
+    'Inter',
+    '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  ],
+})
 
 export const metadata: Metadata = {
   title: 'Adil Hanney',
