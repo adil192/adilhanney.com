@@ -14,6 +14,7 @@ type MdSections = {
   technologies: Technology[],
   content: string,
   date: string | undefined,
+  images?: React.ReactNode[],
 }[]
 
 async function readMd(fileName: string): Promise<string> {
@@ -53,6 +54,28 @@ export default async function AsyncHome() {
       technologies: [Technology.flutter],
       content: await readMd('saber.md'),
       date: 'July 2022',
+      images: [
+        <Image
+          src="projects/saber-landing.png"
+          aria-hidden='true' alt=''
+          width={1920} height={1080} />,
+        <Image
+          src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/home.png"
+          aria-hidden='true' alt=''
+          width={1440} height={3120} />,
+        <Image
+          src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/editor.png"
+          aria-hidden='true' alt=''
+          width={1440} height={3120} />,
+        <Image
+          src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/settings.png"
+          aria-hidden='true' alt=''
+          width={1440} height={3120} />,
+        <Image
+          src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/login.png"
+          aria-hidden='true' alt=''
+          width={1440} height={3120} />,
+      ],
     },
     {
       id: 'ricochlime',
@@ -94,6 +117,40 @@ export default async function AsyncHome() {
       technologies: [Technology.scss, Technology.js],
       content: await readMd('BlackboardTheme.md'),
       date: 'May 2022',
+      images: [
+        <Image
+          src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/blackboard_images.webp"
+          aria-hidden='true' alt=''
+          width={1920} height={1080} />,
+        <Image
+          src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/course_after.png"
+          aria-hidden='true' alt=''
+          width={1920} height={1080} />,
+        <Image
+          src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/quiz_after.png"
+          aria-hidden='true' alt=''
+          width={1920} height={1080} />,
+        <Image
+          src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/attendance_after.png"
+          aria-hidden='true' alt=''
+          width={1920} height={1080} />,
+        <Image
+          src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/login_after.png"
+          aria-hidden='true' alt=''
+          width={1920} height={1080} />,
+        <Image
+          src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/duo_after.png"
+          aria-hidden='true' alt=''
+          width={1920} height={1080} />,
+        <Image
+          src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/video_after.jpg"
+          aria-hidden='true' alt=''
+          width={1920} height={1080} />,
+        <Image
+          src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/iam_after.png"
+          aria-hidden='true' alt=''
+          width={1920} height={1080} />,
+      ],
     },
     {
       id: 'nonogram',
@@ -337,7 +394,7 @@ function Home(sections: MdSections) {
           ))}
       </nav>
       <main>
-        {sections.map(({ id, icon, header, technologies, content, date }) => (
+        {sections.map(({ id, icon, header, technologies, content, date, images }) => (
           <section key={id} id={id}>
             <div className='section-header'>
               {icon}
@@ -346,8 +403,14 @@ function Home(sections: MdSections) {
                 {technologies.map(technology => <TechnologyIcon key={technology} technology={technology} />)}
               </div>
             </div>
+
             <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
+
             {date && <p className='date'>{date}</p>}
+
+            {images && <div className='section-images'>
+              {images.map((image, i) => <div key={i}>{image}</div>)}
+            </div>}
           </section>
         ))}
       </main>

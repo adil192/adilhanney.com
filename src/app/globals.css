@@ -6,6 +6,8 @@
   --sidebar-padding: 0.5rem;
 
   --border-radius: 1rem;
+
+  --section-padding: 1.5rem;
 }
 
 * {
@@ -47,10 +49,10 @@ code {
 
 img.mock-mac-os-icon {
   /* Matches the padding of a macOS icon */
-  padding: calc(var(--img-width) / 10);
-  border-radius: calc(var(--img-width) * 0.25);
+  padding: calc(var(--img-size) / 10);
+  border-radius: calc(var(--img-size) * 0.25);
 
-  --ds: calc(var(--img-width) / 50);
+  --ds: calc(var(--img-size) / 50);
   filter: drop-shadow(var(--ds) var(--ds) var(--ds) rgba(0, 0, 0, 0.2));
 }
 
@@ -86,9 +88,9 @@ nav {
     list-style: none;
 
     & img {
-      --img-width: min(var(--sidebar-width),
+      --img-size: min(var(--sidebar-width),
           var(--sidebar-max-width));
-      width: var(--img-width);
+      width: var(--img-size);
       height: auto;
     }
   }
@@ -138,7 +140,7 @@ main {
 
 section {
   background: var(--surface-1);
-  padding: 1.5rem;
+  padding: var(--section-padding);
   border-radius: var(--border-radius);
   max-width: 70rem;
   margin-bottom: 2rem;
@@ -161,10 +163,10 @@ section {
     margin-bottom: 1.5rem;
 
     & img {
-      --img-width: 2em;
-      height: var(--img-width);
+      --img-size: 2em;
+      height: var(--img-size);
       width: auto;
-      max-width: calc(var(--img-width) * 1.5);
+      max-width: calc(var(--img-size) * 1.5);
       margin-inline-end: 0.5rem;
     }
 
@@ -175,6 +177,30 @@ section {
 
     & .technologies>*:last-child img {
       margin-inline-end: 0;
+    }
+  }
+
+  & .section-images {
+    /* scrollable row of images */
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+
+    /* allow images to scroll up to edge of section */
+    margin-inline: calc(-1 * var(--section-padding));
+    padding-inline: var(--section-padding);
+    /* keep scrollbar out of the way */
+    margin-bottom: calc(-1 * var(--section-padding));
+    padding-bottom: var(--section-padding);
+
+    & img {
+      --img-size: min(33vh, 33vw);
+      height: var(--img-size);
+      width: auto;
+
+      flex-shrink: 0;
+      border-radius: var(--border-radius);
     }
   }
 }
