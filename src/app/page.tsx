@@ -56,22 +56,27 @@ export default async function AsyncHome() {
       date: 'July 2022',
       images: [
         <Image
+          key='saber-landing'
           src="projects/saber-landing.png"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
         <Image
+          key='home'
           src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/home.png"
           aria-hidden='true' alt=''
           width={1440} height={3120} />,
         <Image
+          key='editor'
           src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/editor.png"
           aria-hidden='true' alt=''
           width={1440} height={3120} />,
         <Image
+          key='settings'
           src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/settings.png"
           aria-hidden='true' alt=''
           width={1440} height={3120} />,
         <Image
+          key='login'
           src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/login.png"
           aria-hidden='true' alt=''
           width={1440} height={3120} />,
@@ -119,34 +124,42 @@ export default async function AsyncHome() {
       date: 'May 2022',
       images: [
         <Image
+          key='blackboard_images'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/blackboard_images.webp"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
         <Image
+          key='course_after'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/course_after.png"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
         <Image
+          key='quiz_after'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/quiz_after.png"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
         <Image
+          key='attendance_after'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/attendance_after.png"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
         <Image
+          key='login_after'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/login_after.png"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
         <Image
+          key='duo_after'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/duo_after.png"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
         <Image
+          key='video_after'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/video_after.jpg"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
         <Image
+          key='iam_after'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/iam_after.png"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
@@ -409,7 +422,7 @@ function Home(sections: MdSections) {
             {date && <p className='date'>{date}</p>}
 
             {images && <div className='section-images'>
-              {images.map((image, i) => <div key={i}>{image}</div>)}
+              {images}
             </div>}
           </section>
         ))}
