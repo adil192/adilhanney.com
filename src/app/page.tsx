@@ -1,21 +1,11 @@
+'use client';
+
 import path from 'path'
-import Markdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
 import Image from 'next/image'
 
-import { Technology, TechnologyIcon } from './_components/technology';
+import { Technology } from './_components/technology';
 
-import styles from './page.module.css'
-
-type MdSections = {
-  id: string,
-  icon: React.ReactNode,
-  header: string,
-  technologies: Technology[],
-  content: string,
-  date: string | undefined,
-  images?: React.ReactNode[],
-}[]
+import { MdSection, Section } from './_components/section';
 
 async function readMd(fileName: string): Promise<string> {
   const fs = require('fs');
@@ -379,7 +369,7 @@ export default async function AsyncHome() {
   ])
 }
 
-function Home(sections: MdSections) {
+function Home(sections: MdSection[]) {
   return (
     <>
       <a href='#about'>
@@ -407,24 +397,8 @@ function Home(sections: MdSections) {
           ))}
       </nav>
       <main>
-        {sections.map(({ id, icon, header, technologies, content, date, images }) => (
-          <section key={id} id={id}>
-            <div className='section-header'>
-              {icon}
-              <h2>{header}</h2>
-              <div className='technologies'>
-                {technologies.map(technology => <TechnologyIcon key={technology} technology={technology} />)}
-              </div>
-            </div>
-
-            <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
-
-            {date && <p className='date'>{date}</p>}
-
-            {images && <div className='section-images'>
-              {images}
-            </div>}
-          </section>
+        {sections.map((section) => (
+          <Section key={section.id} {...section} />
         ))}
       </main>
     </>
