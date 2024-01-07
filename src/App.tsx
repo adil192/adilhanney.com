@@ -446,7 +446,7 @@ function Home(sections: MdSection[]) {
         <h1>Adil Hanney</h1>
         <p>Software Engineer</p>
       </header>
-      <nav>
+      <menu>
         {sections
           .filter(({ id }) => id !== 'about')
           .map(({ id, icon }) => (
@@ -456,7 +456,7 @@ function Home(sections: MdSection[]) {
               </a>
             </li>
           ))}
-      </nav>
+      </menu>
       <main>
         {sections.map((section) => (
           <Section key={section.id} {...section} />

@@ -83,7 +83,7 @@ header {
   }
 }
 
-nav {
+menu {
   background: var(--surface-1);
   padding: var(--sidebar-padding);
   border-top-right-radius: var(--border-radius);
@@ -118,7 +118,7 @@ main {
     background: none;
   }
 
-  nav {
+  menu {
     display: none;
   }
 
