@@ -235,15 +235,27 @@ section {
     margin-bottom: 1rem;
     padding: 1rem;
     
-    & h2 {
+    & .spacer {
       flex: 1;
     }
-    & .section-dialog-close {
+    & .section-dialog-button {
       appearance: none;
       padding: 0.5rem;
       background: none;
       border: none;
       cursor: pointer;
+      &[disabled] {
+        cursor: default;
+      }
+    }
+    & .section-dialog-nav {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 1rem;
+      padding-inline: 1rem;
+      & > p {
+        padding-block: 0.5rem;
+      }
     }
   }
   & .section-dialog-wrapper {

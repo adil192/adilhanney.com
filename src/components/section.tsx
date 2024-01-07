@@ -55,8 +55,32 @@ export function Section({ id, icon, header, technologies, content, date, images 
       >
         <div className='section-dialog-header'>
           <h2>{header}</h2>
+          <div className='section-dialog-nav'>
+            <button
+              className='section-dialog-button'
+              onClick={() => {
+                if (dialogImage === undefined) return;
+                if (dialogImage <= 0) return;
+                setDialogImage(dialogImage - 1);
+              }}
+              disabled={dialogImage === undefined || dialogImage === 0}>
+              &#x25C0;
+            </button>
+            <p>{dialogImage !== undefined ? dialogImage + 1 : 0} / {images.length}</p>
+            <button
+              className='section-dialog-button'
+              onClick={() => {
+                if (dialogImage === undefined) return;
+                if (dialogImage >= images.length - 1) return;
+                setDialogImage(dialogImage + 1);
+              }}
+              disabled={dialogImage === undefined || dialogImage === images.length - 1}>
+              &#x25B6;
+            </button>
+          </div>
+          <div className='spacer' />
           <button
-            className='section-dialog-close'
+            className='section-dialog-button'
             onClick={() => setDialogImage(undefined)}>
             &#x2715;
           </button>
