@@ -42,18 +42,27 @@ export function Section({ id, icon, header, technologies, content, date, images 
     {date && <p className='date'>{date}</p>}
 
     {images && <>
-      <div className='section-images' onClick={handleClickOpen}>
-        {images}
+      <div className='section-images'>
+        {images.map((image, index) => (
+          <div key={index} onClick={handleClickOpen}>
+            {image}
+          </div>
+        ))}
       </div>
       <Dialog
         fullScreen
         open={dialogOpen}
         onClose={handleClose}
+        className='section-dialog'
       >
-        <div className='section-images'>
-          {images.map((image) => <div key={image?.toString()}>
-            {image}
-          </div>)}
+        <div className='section-dialog-header'>
+          <h2>{header}</h2>
+          <button className='section-dialog-close' onClick={handleClose}>
+            &#x2715;
+          </button>
+        </div>
+        <div className='section-dialog-images'>
+          {images}
         </div>
       </Dialog>
     </>}

@@ -201,12 +201,63 @@ section {
     margin-bottom: calc(-1 * var(--section-padding));
     padding-bottom: var(--section-padding);
 
+    & > * {
+      flex-shrink: 0;
+      border-radius: var(--border-radius);
+      cursor: zoom-in;
+    }
+
     & img {
       --img-size: min(33vh, 33vw);
       height: var(--img-size);
       width: auto;
+      border-radius: var(--border-radius);
+    }
+  }
+}
 
-      flex-shrink: 0;
+.section-dialog {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90vw;
+  max-width: 70rem;
+  margin: 1rem auto;
+
+  &,
+  & .MuiDialog-paper {
+    background: var(--surface-1);
+    border-radius: var(--border-radius);
+    color: var(--on-surface);
+  }
+  & .MuiDialog-paper {
+    padding: 1rem;
+  }
+
+  & .section-dialog-header {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 1rem;
+    
+    & h2 {
+      flex: 1;
+    }
+    & .section-dialog-close {
+      appearance: none;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  & .section-dialog-images {
+    flex: 1;
+    overflow-y: auto;
+
+    & img {
+      width: 100%;
+      height: auto;
+      max-height: 90%;
+      object-fit: contain;
       border-radius: var(--border-radius);
     }
   }
