@@ -5,11 +5,6 @@ import React from 'react';
 import { Technology } from './components/technology.tsx';
 import { MdSection, Section } from './components/section.tsx';
 
-async function readMd(mdFile: string): Promise<string> {
-  const fetched = await fetch(mdFile);
-  const text = await fetched.text();
-  return text;
-}
 function __readMd(mdFile: string): string {
   return mdFile;
 }
@@ -20,7 +15,7 @@ export default function AsyncHome() {
       id: 'about',
       icon: <img
         src="favicon.svg"
-        alt="Adil's profile picture"
+        alt="About me"
         width={132}
         height={140}
         className='mock-mac-os-icon'
@@ -373,7 +368,7 @@ function Home(sections: MdSection[]) {
       <a href='#about'>
         <img
           src="favicon.svg"
-          alt="Adil's profile picture"
+          alt="About me"
           width={96}
           height={100.85}
           className="pfp"
