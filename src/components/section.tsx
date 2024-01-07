@@ -1,9 +1,11 @@
 import React from 'react';
 import Markdown from "react-markdown";
-import { Technology, TechnologyIcon } from "./technology.tsx";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import remarkGfm from "remark-gfm";
 import { Dialog } from "@mui/material";
 import { useState } from "react";
+
+import { Technology, TechnologyIcon } from "./technology.tsx";
 
 export type MdSection = {
   id: string,
@@ -16,15 +18,11 @@ export type MdSection = {
 }
 
 export function Section({ id, icon, header, technologies, content, date, images }: MdSection): JSX.Element {
-  const [dialogOpen, setDialogOpen] = useState(false);
-
-  const handleClickOpen = () => {
-    console.log('click');
-    setDialogOpen(true);
-  }
-  const handleClose = () => {
-    setDialogOpen(false);
-  }
+  /*
+   * If the dialog is open, the index of the image to show in the dialog.
+   * If the dialog is closed, undefined.
+   */
+  const [dialogImage, setDialogImage] = useState<number | undefined>(undefined);
 
   return <section key={id} id={id}>
     <div className='section-header'>
@@ -44,26 +42,32 @@ export function Section({ id, icon, header, technologies, content, date, images 
     {images && <>
       <div className='section-images'>
         {images.map((image, index) => (
-          <div key={index} onClick={handleClickOpen}>
+          <div key={index} onClick={() => setDialogImage(index)}>
             {image}
           </div>
         ))}
       </div>
       <Dialog
         fullScreen
-        open={dialogOpen}
-        onClose={handleClose}
+        open={dialogImage !== undefined}
+        onClose={() => setDialogImage(undefined)}
         className='section-dialog'
       >
         <div className='section-dialog-header'>
           <h2>{header}</h2>
-          <button className='section-dialog-close' onClick={handleClose}>
+          <button
+            className='section-dialog-close'
+            onClick={() => setDialogImage(undefined)}>
             &#x2715;
           </button>
         </div>
-        <div className='section-dialog-images'>
-          {images}
-        </div>
+        <TransformWrapper minScale={0.5}>
+          <TransformComponent
+            wrapperClass='section-dialog-wrapper'
+            contentClass='section-dialog-content'>
+            {images[dialogImage ?? 0]}
+          </TransformComponent>
+        </TransformWrapper>
       </Dialog>
     </>}
   </section>
