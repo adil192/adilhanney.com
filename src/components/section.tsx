@@ -1,7 +1,6 @@
-'use client';
-
+import React from 'react';
 import Markdown from "react-markdown";
-import { Technology, TechnologyIcon } from "./technology";
+import { Technology, TechnologyIcon } from "./technology.tsx";
 import remarkGfm from "remark-gfm";
 import { Dialog } from "@mui/material";
 import { useState } from "react";
@@ -17,7 +16,7 @@ export type MdSection = {
 }
 
 export function Section({ id, icon, header, technologies, content, date, images }: MdSection): JSX.Element {
-  const [dialogOpen, setDialogOpen] = useState(true);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   const handleClickOpen = () => {
     console.log('click');
@@ -43,7 +42,6 @@ export function Section({ id, icon, header, technologies, content, date, images 
     {date && <p className='date'>{date}</p>}
 
     {images && <>
-      <button className='button' onClick={handleClickOpen}>View Images</button>
       <div className='section-images' onClick={handleClickOpen}>
         {images}
       </div>

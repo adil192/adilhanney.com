@@ -1,6 +1,4 @@
-'use client';
-
-import Image from 'next/image'
+import React from 'react';
 
 export enum Technology {
   dart,
@@ -13,8 +11,8 @@ export enum Technology {
 export function TechnologyIcon({ technology }: { technology: Technology }): JSX.Element {
   switch (technology) {
     case Technology.dart:
-      return <a href="https://dart.dev/" target="_blank">
-        <Image
+      return <a href="https://dart.dev/" target="_blank" rel="noreferrer">
+        <img
           key={technology}
           src="technologies/dart.svg"
           alt={Technology[technology]}
@@ -24,8 +22,8 @@ export function TechnologyIcon({ technology }: { technology: Technology }): JSX.
         />
       </a>
     case Technology.flutter:
-      return <a href="https://flutter.dev/" target="_blank">
-        <Image
+      return <a href="https://flutter.dev/" target="_blank" rel="noreferrer">
+        <img
           key={technology}
           src="technologies/flutter.svg"
           alt={Technology[technology]}
@@ -35,8 +33,8 @@ export function TechnologyIcon({ technology }: { technology: Technology }): JSX.
         />
       </a>
     case Technology.pwa:
-      return <a href="https://web.dev/explore/progressive-web-apps" target="_blank">
-        <Image
+      return <a href="https://web.dev/explore/progressive-web-apps" target="_blank" rel="noreferrer">
+        <img
           key={technology}
           src="technologies/pwa.svg"
           alt={Technology[technology]}
@@ -46,8 +44,8 @@ export function TechnologyIcon({ technology }: { technology: Technology }): JSX.
         />
       </a>
     case Technology.scss:
-      return <a href="https://sass-lang.com/" target="_blank">
-        <Image
+      return <a href="https://sass-lang.com/" target="_blank" rel="noreferrer">
+        <img
           key={technology}
           src="technologies/scss.svg"
           alt={Technology[technology]}
@@ -57,8 +55,8 @@ export function TechnologyIcon({ technology }: { technology: Technology }): JSX.
         />
       </a>
     case Technology.js:
-      return <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-        <Image
+      return <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
+        <img
           key={technology}
           src="technologies/js.png"
           alt={Technology[technology]}

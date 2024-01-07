@@ -16,26 +16,32 @@
   margin: 0;
 }
 
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 html {
   color-scheme: light dark;
 }
 
 body {
+  background: var(--md-sys-color-background);
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+#root {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   gap: 1rem;
-  background: var(--md-sys-color-background);
-
-  /* overriden by the "inter.className" class in layout.tsx */
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
 }
 
 a {
@@ -44,7 +50,8 @@ a {
 }
 
 code {
-  font-family: 'Fira Mono', 'Droid Sans Mono', 'monospace', monospace;
+  font-family: 'Fira Mono', 'Droid Sans Mono', source-code-pro, Menlo, Monaco,
+    Consolas, 'Courier New', monospace;
 }
 
 img.mock-mac-os-icon {

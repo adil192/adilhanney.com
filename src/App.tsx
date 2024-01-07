@@ -1,26 +1,24 @@
-'use client';
+import './App.css';
 
-import path from 'path'
-import Image from 'next/image'
+import React from 'react';
 
-import { Technology } from './_components/technology';
+import { Technology } from './components/technology.tsx';
+import { MdSection, Section } from './components/section.tsx';
 
-import { MdSection, Section } from './_components/section';
-
-async function readMd(fileName: string): Promise<string> {
-  const fs = require('fs');
-  const { promises: { readFile } } = fs;
-
-  const filePath = path.join(process.cwd(), 'src/sections', fileName);
-  const contents = (await readFile(filePath)).toString();
-  return contents;
+async function readMd(mdFile: string): Promise<string> {
+  const fetched = await fetch(mdFile);
+  const text = await fetched.text();
+  return text;
+}
+function __readMd(mdFile: string): string {
+  return mdFile;
 }
 
-export default async function AsyncHome() {
+export default function AsyncHome() {
   return Home([
     {
       id: 'about',
-      icon: <Image
+      icon: <img
         src="favicon.svg"
         alt="Adil's profile picture"
         width={132}
@@ -29,12 +27,12 @@ export default async function AsyncHome() {
       />,
       header: 'About me',
       technologies: [],
-      content: await readMd('about.md'),
+      content: __readMd('about.md'),
       date: undefined,
     },
     {
       id: 'saber',
-      icon: <Image
+      icon: <img
         src="https://raw.githubusercontent.com/saber-notes/saber/main/assets/icon/icon_macos.png"
         alt="Saber"
         width={80}
@@ -42,30 +40,30 @@ export default async function AsyncHome() {
       />,
       header: 'Saber',
       technologies: [Technology.flutter],
-      content: await readMd('saber.md'),
+      content: __readMd('saber.md'),
       date: 'July 2022',
       images: [
-        <Image
+        <img
           key='saber-landing'
           src="projects/saber-landing.png"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
-        <Image
+        <img
           key='home'
           src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/home.png"
           aria-hidden='true' alt=''
           width={1440} height={3120} />,
-        <Image
+        <img
           key='editor'
           src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/editor.png"
           aria-hidden='true' alt=''
           width={1440} height={3120} />,
-        <Image
+        <img
           key='settings'
           src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/settings.png"
           aria-hidden='true' alt=''
           width={1440} height={3120} />,
-        <Image
+        <img
           key='login'
           src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/login.png"
           aria-hidden='true' alt=''
@@ -74,7 +72,7 @@ export default async function AsyncHome() {
     },
     {
       id: 'ricochlime',
-      icon: <Image
+      icon: <img
         src="https://raw.githubusercontent.com/adil192/ricochlime/main/assets/icon/icon_macos.png"
         alt="Ricochlime"
         width={80}
@@ -82,12 +80,12 @@ export default async function AsyncHome() {
       />,
       header: 'Ricochlime',
       technologies: [Technology.flutter],
-      content: await readMd('ricochlime.md'),
+      content: __readMd('ricochlime.md'),
       date: 'August 2023'
     },
     {
       id: 'timing',
-      icon: <Image
+      icon: <img
         src="projects/timing.svg"
         alt="Timing Flutter"
         width={80}
@@ -96,12 +94,12 @@ export default async function AsyncHome() {
       />,
       header: 'Timing Trainer',
       technologies: [Technology.flutter, Technology.pwa],
-      content: await readMd('timing.md'),
+      content: __readMd('timing.md'),
       date: 'June 2022'
     },
     {
       id: 'BlackboardTheme',
-      icon: <Image
+      icon: <img
         src="projects/BlackboardTheme.webp"
         alt="Blackboard Theme"
         width={80}
@@ -110,45 +108,45 @@ export default async function AsyncHome() {
       />,
       header: 'Blackboard Theme',
       technologies: [Technology.scss, Technology.js],
-      content: await readMd('BlackboardTheme.md'),
+      content: __readMd('BlackboardTheme.md'),
       date: 'May 2022',
       images: [
-        <Image
+        <img
           key='blackboard_images'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/blackboard_images.webp"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
-        <Image
+        <img
           key='course_after'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/course_after.png"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
-        <Image
+        <img
           key='quiz_after'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/quiz_after.png"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
-        <Image
+        <img
           key='attendance_after'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/attendance_after.png"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
-        <Image
+        <img
           key='login_after'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/login_after.png"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
-        <Image
+        <img
           key='duo_after'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/duo_after.png"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
-        <Image
+        <img
           key='video_after'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/video_after.jpg"
           aria-hidden='true' alt=''
           width={1920} height={1080} />,
-        <Image
+        <img
           key='iam_after'
           src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/iam_after.png"
           aria-hidden='true' alt=''
@@ -157,7 +155,7 @@ export default async function AsyncHome() {
     },
     {
       id: 'nonogram',
-      icon: <Image
+      icon: <img
         src="projects/nonogram.webp"
         alt="Nonogram"
         width={80}
@@ -166,12 +164,12 @@ export default async function AsyncHome() {
       />,
       header: 'Nonogram',
       technologies: [Technology.pwa],
-      content: await readMd('nonogram.md'),
+      content: __readMd('nonogram.md'),
       date: 'May 2022',
     },
     {
       id: 'social',
-      icon: <Image
+      icon: <img
         // TODO(adil192): Make a better icon
         src="projects/blank.svg"
         alt="Social"
@@ -181,12 +179,12 @@ export default async function AsyncHome() {
       />,
       header: 'Social',
       technologies: [Technology.pwa],
-      content: await readMd('social.md'),
+      content: __readMd('social.md'),
       date: 'April 2022',
     },
     {
       id: 'quintle',
-      icon: <Image
+      icon: <img
         src="projects/quintle.png"
         alt="Quintle"
         width={80}
@@ -195,12 +193,12 @@ export default async function AsyncHome() {
       />,
       header: 'Quintle',
       technologies: [Technology.pwa],
-      content: await readMd('quintle.md'),
+      content: __readMd('quintle.md'),
       date: 'February 2022',
     },
     {
       id: 's-pen',
-      icon: <Image
+      icon: <img
         src="projects/spencover.webp"
         alt="S Pen"
         width={80}
@@ -209,12 +207,12 @@ export default async function AsyncHome() {
       />,
       header: 'S Pen',
       technologies: [],
-      content: await readMd('s-pen.md'),
+      content: __readMd('s-pen.md'),
       date: 'February 2022',
     },
     {
       id: 'fabrik',
-      icon: <Image
+      icon: <img
         src="projects/fabrik.webp"
         alt="Fabrik"
         width={80}
@@ -223,12 +221,12 @@ export default async function AsyncHome() {
       />,
       header: 'Fabrik',
       technologies: [],
-      content: await readMd('fabrik.md'),
+      content: __readMd('fabrik.md'),
       date: 'January 2022',
     },
     {
       id: 'clocks',
-      icon: <Image
+      icon: <img
         src="projects/clocks.webp"
         alt="Clocks"
         width={80}
@@ -237,12 +235,12 @@ export default async function AsyncHome() {
       />,
       header: 'Clocks',
       technologies: [],
-      content: await readMd('clocks.md'),
+      content: __readMd('clocks.md'),
       date: 'November 2021',
     },
     {
       id: 'zombies',
-      icon: <Image
+      icon: <img
         src="projects/zombies.webp"
         alt="Zombies"
         width={80}
@@ -251,12 +249,12 @@ export default async function AsyncHome() {
       />,
       header: 'Zombies',
       technologies: [],
-      content: await readMd('zombies.md'),
+      content: __readMd('zombies.md'),
       date: 'November 2021',
     },
     {
       id: 'calculator',
-      icon: <Image
+      icon: <img
         src="projects/calculator.webp"
         alt="Calculator"
         width={80}
@@ -265,12 +263,12 @@ export default async function AsyncHome() {
       />,
       header: 'Calculator',
       technologies: [],
-      content: await readMd('calculator.md'),
+      content: __readMd('calculator.md'),
       date: 'November 2021',
     },
     {
       id: 'loffice-365',
-      icon: <Image
+      icon: <img
         src="projects/loffice-365.webp"
         alt="loffice-365"
         width={80}
@@ -279,12 +277,12 @@ export default async function AsyncHome() {
       />,
       header: 'loffice-365',
       technologies: [],
-      content: await readMd('loffice-365.md'),
+      content: __readMd('loffice-365.md'),
       date: 'October 2021',
     },
     {
       id: 'SamsungAppsPatcher',
-      icon: <Image
+      icon: <img
         src="projects/SamsungAppsPatcher.webp"
         alt="Samsung Apps Patcher"
         width={80}
@@ -293,12 +291,12 @@ export default async function AsyncHome() {
       />,
       header: 'Samsung Apps Patcher',
       technologies: [],
-      content: await readMd('SamsungAppsPatcher.md'),
+      content: __readMd('SamsungAppsPatcher.md'),
       date: 'June 2021',
     },
     {
       id: 'S20Debloat',
-      icon: <Image
+      icon: <img
         src="projects/S20Debloat.webp"
         alt="S20 Debloat"
         width={80}
@@ -307,12 +305,12 @@ export default async function AsyncHome() {
       />,
       header: 'S20 Debloat',
       technologies: [],
-      content: await readMd('S20Debloat.md'),
+      content: __readMd('S20Debloat.md'),
       date: 'May 2021',
     },
     {
       id: 'collatz',
-      icon: <Image
+      icon: <img
         src="projects/collatz.webp"
         alt="Collatz"
         width={80}
@@ -321,12 +319,12 @@ export default async function AsyncHome() {
       />,
       header: 'Collatz',
       technologies: [],
-      content: await readMd('collatz.md'),
+      content: __readMd('collatz.md'),
       date: 'June 2020',
     },
     {
       id: 'colours',
-      icon: <Image
+      icon: <img
         src="projects/colours.webp"
         alt="Colours"
         width={80}
@@ -335,12 +333,12 @@ export default async function AsyncHome() {
       />,
       header: 'Colours',
       technologies: [],
-      content: await readMd('colours.md'),
+      content: __readMd('colours.md'),
       date: 'before June 2020',
     },
     {
       id: 'repo',
-      icon: <Image
+      icon: <img
         src="projects/repo.webp"
         alt="Repo"
         width={80}
@@ -349,12 +347,12 @@ export default async function AsyncHome() {
       />,
       header: 'Repo',
       technologies: [],
-      content: await readMd('repo.md'),
+      content: __readMd('repo.md'),
       date: 'before June 2020',
     },
     {
       id: 'LIFE',
-      icon: <Image
+      icon: <img
         src="projects/LIFE.webp"
         alt="LIFE"
         width={80}
@@ -363,7 +361,7 @@ export default async function AsyncHome() {
       />,
       header: 'LIFE',
       technologies: [],
-      content: await readMd('LIFE.md'),
+      content: __readMd('LIFE.md'),
       date: 'before June 2020',
     },
   ])
@@ -373,7 +371,7 @@ function Home(sections: MdSection[]) {
   return (
     <>
       <a href='#about'>
-        <Image
+        <img
           src="favicon.svg"
           alt="Adil's profile picture"
           width={96}
