@@ -248,17 +248,44 @@ The other game mode is where you can input any keyword and it will generate a pu
   {
     id: 'social',
     icon: <img
-      // TODO(adil192): Make a better icon
-      src="projects/blank.svg"
+      src="projects/social.webp"
       alt="Social"
       width={80}
       height={80}
       className='mock-mac-os-icon'
     />,
-    header: 'Social',
+    header: 'Social Media Demo',
     technologies: [Technology.pwa],
-    content: __readMd('social.md'),
+    content: `
+This was a working (though inefficient) social media demo I made after I was frustrated by not being able to access my chats across all my devices.
+
+I wanted to make a proof of concept that it was possible to make a social media app completely in the browser, but that acted like a native app when installed as a PWA.
+
+It had a Snapchat-like layout where you could swipe between the camera, chats, and feed. I only implemented the chat functionality and used it to chat with my friends for a while. I tested it with lots of cat pictures as you can see in the screenshots!
+`,
     date: 'April 2022',
+    images: [
+      <img
+        key='social-1'
+        src="projects/social-1.png"
+        aria-hidden='true' alt=''
+        width={2400} height={1080} />,
+      <img
+        key='social-2'
+        src="projects/social-2.jpg"
+        aria-hidden='true' alt=''
+        width={2400} height={1080} />,
+      <img
+        key='social-3'
+        src="projects/social-3.jpg"
+        aria-hidden='true' alt=''
+        width={2400} height={1080} />,
+      <img
+        key='social-4'
+        src="projects/social-4.jpg"
+        aria-hidden='true' alt=''
+        width={2400} height={1080} />,
+    ],
   },
   {
     id: 'quintle',

@@ -33,7 +33,7 @@ export function TechnologyIcon({ technology }: { technology: Technology }): JSX.
         />
       </a>
     case Technology.pwa:
-      return <a href="https://web.dev/explore/progressive-web-apps" target="_blank" rel="noreferrer">
+      return <a href="https://en.wikipedia.org/wiki/Progressive_web_app" target="_blank" rel="noreferrer">
         <img
           key={technology}
           src="technologies/pwa.svg"
