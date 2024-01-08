@@ -223,8 +223,26 @@ It's hard to describe all the changes I've made, so I recommend you check out th
       className='mock-mac-os-icon'
     />,
     header: 'Nonogram',
-    technologies: [Technology.pwa],
-    content: __readMd('nonogram.md'),
+    technologies: [Technology.flutter, Technology.pwa],
+    content: `
+Nonogram ([wikipedia](https://en.wikipedia.org/wiki/Nonogram)) is a puzzle game where you fill in squares on a grid based on the
+row/column clues.
+
+I created this web app after enjoying the
+[Android 10 Easter egg](https://www.androidauthority.com/android-10-easter-egg-2-1017821/)
+and my success with [Quintle](#quintle).
+You can find it at [adil.hanney.org/nonogram](https://adil.hanney.org/nonogram/).
+
+I later made [Super Nonogram](https://github.com/adil192/super_nonogram)
+([available online](https://supernonogram.adil.hanney.org/))
+which is a rewrite of this app in Flutter with some new features.
+
+One of the game modes in Super Nonogram is procedurally generated puzzles
+that get harder as you progress.
+
+The other game mode is where you can input any keyword and it will generate a puzzle based on that. It does this by interacting with the
+[Pixabay API](https://pixabay.com/api/docs/) to get images based on the keyword and then converting them to puzzles.
+`,
     date: 'May 2022',
   },
   {
