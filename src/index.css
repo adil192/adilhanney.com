@@ -104,9 +104,18 @@ menu {
 }
 
 main {
-  padding-inline: 1rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
   overflow-y: auto;
   scroll-behavior: smooth;
+  transition: padding-left 0.1s ease-out, padding-right 0.1s ease-out;
+}
+
+@media (width <= 80rem) {
+  main {
+    padding-left: 0;
+    padding-right: 1rem;
+  }
 }
 
 @media print {
