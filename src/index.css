@@ -31,9 +31,9 @@ html {
 body {
   background: var(--md-sys-color-background);
 
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-    'Helvetica Neue', sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  font-family: 'Inter',
+    ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -50,8 +50,10 @@ a {
 }
 
 code {
-  font-family: 'Fira Mono', 'Droid Sans Mono', source-code-pro, Menlo, Monaco,
-    Consolas, 'Courier New', monospace;
+  font-family: 'Fira Mono',
+    ui-monospace,
+    SFMono-Regular, source-code-pro, 'Source Code Pro',
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 img.mock-mac-os-icon {
