@@ -8,6 +8,8 @@
   --border-radius: 1rem;
 
   --section-padding: 1.5rem;
+
+  --scrollbar-color: color-mix(in hsl, var(--md-sys-color-on-background) 50%, var(--md-sys-color-background));
 }
 
 * {
@@ -83,6 +85,12 @@ header {
     font-style: italic;
     margin-top: -0.25rem;
   }
+}
+
+menu,
+main {
+  scrollbar-color: var(--scrollbar-color) transparent;
+  scrollbar-width: thin;
 }
 
 menu {
