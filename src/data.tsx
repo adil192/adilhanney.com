@@ -50,6 +50,7 @@ Unfortunately, it was only compatible with Samsung's Android devices and select 
 I'd been wanting to make my own notes app for a while and in the summer holidays of 2022, I restumbled upon Flutter and finally decided to give it a go. Nowadays, Saber has likely* tens of thousands of users, and it's advancing at a rapid pace. (*I don't directly track users, but some partial data is available from various sources.)
 
 Developing Saber was (and is continuing to be) a huge learning experience for me. I've successfully deployed custom GLSL shaders, continual performance optimisations, CI/CD workflows on GitHub Actions, backwards compatibility for new features, [adaptive and responsive UIs](https://docs.flutter.dev/ui/layout/responsive/adaptive-responsive#the-difference-between-an-adaptive-and-a-responsive-app), [reusable packages](https://pub.dev/packages?q=publisher%3Aadil.hanney.org+show%3Aunlisted), and much more.
+I also made the [Saber landing page](https://saber.adil.hanney.org/) ([GitHub](https://github.com/saber-notes/saber-landing)) using Next.js's [Static Site Generation (SSG)](https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation).
 
 Saber is available on all major platforms; find out more at [saber.adil.hanney.org](https://saber.adil.hanney.org) or on [GitHub](https://github.com/saber-notes/saber).
 `,
