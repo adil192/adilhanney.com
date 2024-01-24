@@ -10,6 +10,12 @@
   --section-padding: 1.5rem;
 
   --scrollbar-color: color-mix(in hsl, var(--md-sys-color-on-background) 50%, var(--md-sys-color-background));
+
+  --body-fonts: Inter,
+    ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji",
+    emoji;
 }
 
 * {
@@ -32,11 +38,11 @@ html {
 
 body {
   background: var(--md-sys-color-background);
+  font-family: var(--body-fonts);
+}
 
-  font-family: 'Inter',
-    ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
+h1, h2, h3, h4, h5, h6 {
+  font-family: Urbanist, var(--body-fonts);
 }
 
 #root {
@@ -76,6 +82,8 @@ img.mock-mac-os-icon {
 }
 
 header {
+  /* todo: place header above card body */
+
   align-self: center;
   padding: 1rem;
 
