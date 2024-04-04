@@ -151,7 +151,9 @@ View more on [GitHub](https://github.com/adil192/timing_flutter).
     header: 'Blackboard Theme',
     technologies: [Technology.scss, Technology.js],
     content: `
-My \`BlackboardTheme\` project encompasses a collection of (unofficial) tweaks and improvements to the University of Manchester's websites including Blackboard. It does this with the browser extensions [Stylus](https://addons.mozilla.org/en-GB/firefox/addon/styl-us/) for styles and [Tampermonkey](https://addons.mozilla.org/en-GB/firefox/addon/tampermonkey/) for scripts, which inject my custom CSS and JavaScript into the pages.
+My \`BlackboardTheme\` project encompasses a collection of (unofficial) tweaks and improvements to the University of Manchester's websites including Blackboard.
+~~It does this with the browser extensions [Stylus](https://addons.mozilla.org/en-GB/firefox/addon/styl-us/) for styles and [Tampermonkey](https://addons.mozilla.org/en-GB/firefox/addon/tampermonkey/) for scripts, which inject my custom CSS and JavaScript into the pages.~~
+I've since moved to bundling everything into a single easy-to-install browser extension.
 
 This project was originally only intended to apply Google's Material Design to my university's Blackboard website,
 but as it grew, I began to theme more of my university's websites and then started adding small scripts to add features or boost usability.
