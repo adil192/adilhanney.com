@@ -173,45 +173,40 @@ It's hard to describe all the changes I've made, so I recommend you check out th
     date: 'May 2022',
     images: [
       <img
-        key='blackboard_images'
-        src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/blackboard_images.webp"
+        key='blackboard-grid'
+        src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/blackboard-grid.png"
         aria-hidden='true' alt=''
-        width={1920} height={1080} />,
+        width={1920} height={905} />,
       <img
         key='course_after'
-        src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/course_after.png"
+        src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/course.png"
         aria-hidden='true' alt=''
-        width={1920} height={1080} />,
+        width={3830} height={1077} />,
       <img
         key='quiz_after'
-        src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/quiz_after.png"
+        src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/quiz.png"
         aria-hidden='true' alt=''
-        width={1920} height={1080} />,
-      <img
-        key='attendance_after'
-        src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/attendance_after.png"
-        aria-hidden='true' alt=''
-        width={1920} height={1080} />,
+        width={3825} height={1077} />,
       <img
         key='login_after'
-        src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/login_after.png"
+        src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/login.png"
         aria-hidden='true' alt=''
-        width={1920} height={1080} />,
+        width={3830} height={1077} />,
       <img
         key='duo_after'
-        src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/duo_after.png"
+        src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/duo.png"
         aria-hidden='true' alt=''
-        width={1920} height={1080} />,
+        width={3820} height={1075} />,
       <img
         key='video_after'
-        src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/video_after.jpg"
+        src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/video.png"
         aria-hidden='true' alt=''
-        width={1920} height={1080} />,
+        width={3840} height={1080} />,
       <img
         key='iam_after'
-        src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/iam_after.png"
+        src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/iam.png"
         aria-hidden='true' alt=''
-        width={1920} height={1080} />,
+        width={3830} height={1077} />,
     ],
   },
   {
