@@ -131,8 +131,9 @@ View more on [GitHub](https://github.com/adil192/ricochlime).
 Timing Trainer presents you with a blinking square and you guess the time between blinks.
 As you play, you'll get better at recognizing sub-second intervals.
 
-I first created this game/trainer as a PWA (progressive web app)
-[here](https://adil.hanney.org/timing/).
+I first created this game/trainer
+[as a PWA](https://adil.hanney.org/timing/)
+(progressive web app).
 Later, since it was a very simple app,
 I made a cross-platform version as my first foray into Flutter.
 
@@ -369,7 +370,7 @@ for procedural animation in my A-Level Computer Science project
 In the demo,
 you can customize the number of bones, their length,
 and whether they're constrained by gravity.
-You can try it out [here](https://adil.hanney.org/fabrik/).
+You can [try it out online](https://adil.hanney.org/fabrik/).
 `,
     date: 'January 2022',
     images: [
