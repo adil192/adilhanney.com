@@ -352,9 +352,33 @@ or through the
       className='mock-mac-os-icon'
     />,
     header: 'Fabrik',
+    headerLink: 'https://adil.hanney.org/fabrik/',
     technologies: [],
-    content: __readMd('fabrik.md'),
+    content: `
+A demo of the Forward And Backward Reaching
+[Inverse Kinematics](https://en.wikipedia.org/wiki/Inverse_kinematics)
+(FABRIK) algorithm.
+
+In short, it's a way to calculate the joint positions of a chain of bones
+to reach a given point in space (like your mouse cursor).
+
+I made this to experiment with the algorithm before using it
+for procedural animation in my A-Level Computer Science project
+(a multiplayer shooter game).
+
+In the demo,
+you can customize the number of bones, their length,
+and whether they're constrained by gravity.
+You can try it out [here](https://adil.hanney.org/fabrik/).
+`,
     date: 'January 2022',
+    images: [
+      <img
+        key='fabrik.gif'
+        src="projects/fabrik.gif"
+        aria-hidden='true' alt=''
+        width={360} height={408} />,
+    ],
   },
   {
     id: 'clocks',
