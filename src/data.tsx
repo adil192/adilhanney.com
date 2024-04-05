@@ -318,8 +318,8 @@ On top of the core functionality, I added a few features:
 - The ability to replay previous days' words
 - A mode for e-paper devices that uses greyscale colours and improved contrast
 
-Quintle is available to play at
-[adil.hanney.org/quintle](https://adil.hanney.org/quintle/)
+Quintle is available to play
+[online](https://adil.hanney.org/quintle/)
 or through the
 [Google Play Store](https://play.google.com/store/apps/details?id=org.hanney.adil.quintle).
 `,
