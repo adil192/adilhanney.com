@@ -11,13 +11,14 @@ export type MdSection = {
   id: string,
   icon: React.ReactNode,
   header: string,
+  headerLink?: string,
   technologies: Technology[],
   content: string,
   date: string | undefined,
   images?: React.ReactNode[],
 }
 
-export function Section({ id, icon, header, technologies, content, date, images }: MdSection): JSX.Element {
+export function Section({ id, icon, header, headerLink, technologies, content, date, images }: MdSection): JSX.Element {
   /*
    * If the dialog is open, the index of the image to show in the dialog.
    * If the dialog is closed, undefined.
@@ -27,7 +28,7 @@ export function Section({ id, icon, header, technologies, content, date, images 
   return <section key={id} id={id}>
     <div className='section-header'>
       {icon}
-      <h2>{header}</h2>
+      <h2>{headerLink ? <a href={headerLink}>{header}</a> : header}</h2>
       <div className='technologies'>
         {technologies.map(technology => (
           <TechnologyIcon key={technology} technology={technology} />

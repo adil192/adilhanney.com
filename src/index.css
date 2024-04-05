@@ -181,6 +181,10 @@ section {
 
   & h2 {
     margin-bottom: 1.5rem;
+
+    & a {
+      text-decoration: none;
+    }
   }
   
   & p {

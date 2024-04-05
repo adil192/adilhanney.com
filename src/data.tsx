@@ -40,6 +40,7 @@ or
       height={80}
     />,
     header: 'Saber',
+    headerLink: 'https://saber.adil.hanney.org',
     technologies: [Technology.flutter],
     content: `
 Saber is the notes app built for handwriting. It was my first non-trivial Flutter project, and I've been working on it since July 2022.
@@ -92,6 +93,7 @@ Saber is available on all major platforms; find out more at [saber.adil.hanney.o
       height={80}
     />,
     header: 'Ricochlime',
+    headerLink: 'https://ricochlime.adil.hanney.org',
     technologies: [Technology.flutter],
     content: `
 Ricochlime is a satisfying ~~slime~~ monster shooter game.
@@ -123,6 +125,7 @@ View more on [GitHub](https://github.com/adil192/ricochlime).
       className='mock-mac-os-icon'
     />,
     header: 'Timing Trainer',
+    headerLink: 'https://adil.hanney.org/timing_flutter/',
     technologies: [Technology.flutter, Technology.pwa],
     content: `
 Timing Trainer presents you with a blinking square and you guess the time between blinks.
@@ -149,6 +152,7 @@ View more on [GitHub](https://github.com/adil192/timing_flutter).
       className='mock-mac-os-icon'
     />,
     header: 'Blackboard Theme',
+    headerLink: 'https://github.com/adil192/BlackboardTheme',
     technologies: [Technology.scss, Technology.js],
     content: `
 My \`BlackboardTheme\` project encompasses a collection of (unofficial) tweaks and improvements to the University of Manchester's websites including Blackboard.
@@ -221,6 +225,7 @@ It's hard to describe all the changes I've made, so I recommend you check out th
       className='mock-mac-os-icon'
     />,
     header: 'Nonogram',
+    headerLink: 'https://adil.hanney.org/nonogram/',
     technologies: [Technology.flutter, Technology.pwa],
     content: `
 Nonogram ([wikipedia](https://en.wikipedia.org/wiki/Nonogram)) is a puzzle game where you fill in squares on a grid based on the
@@ -295,6 +300,7 @@ It had a Snapchat-like layout where you could swipe between the camera, chats, a
       className='mock-mac-os-icon'
     />,
     header: 'Quintle',
+    headerLink: 'https://adil.hanney.org/quintle/',
     technologies: [Technology.pwa],
     content: __readMd('quintle.md'),
     date: 'February 2022',
