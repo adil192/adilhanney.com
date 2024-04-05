@@ -302,8 +302,45 @@ It had a Snapchat-like layout where you could swipe between the camera, chats, a
     header: 'Quintle',
     headerLink: 'https://adil.hanney.org/quintle/',
     technologies: [Technology.pwa],
-    content: __readMd('quintle.md'),
+    content: `
+Quintle is my reimplementation of the viral game Wordle
+from before it was acquired by the New York Times.
+
+The design was inspired by
+[neumorphism](https://en.wikipedia.org/wiki/Neumorphism),
+and it's playable offline as a PWA (progressive web app).
+
+The word of the day used to match the official Wordle word,
+but they've since moved to an API approach where the word is fetched from the server,
+so I've stuck with the last publicly available word list.
+
+On top of the core functionality, I added a few features:
+- The ability to replay previous days' words
+- A mode for e-paper devices that uses greyscale colours and improved contrast
+
+Quintle is available to play at
+[adil.hanney.org/quintle](https://adil.hanney.org/quintle/)
+or through the
+[Google Play Store](https://play.google.com/store/apps/details?id=org.hanney.adil.quintle).
+`,
     date: 'February 2022',
+    images: [
+      <img
+        key='quintle.webp'
+        src="https://adil.hanney.org/quintle/screenshots/quintle.webp"
+        aria-hidden='true' alt=''
+        width={1080} height={2240} />,
+      <img
+        key='quintle-results.webp'
+        src="https://adil.hanney.org/quintle/screenshots/quintle-results.webp"
+        aria-hidden='true' alt=''
+        width={1080} height={2240} />,
+      <img
+        key='quintle-tutorial.webp'
+        src="https://adil.hanney.org/quintle/screenshots/quintle-tutorial.webp"
+        aria-hidden='true' alt=''
+        width={1080} height={2240} />,
+    ],
   },
   {
     id: 's-pen',

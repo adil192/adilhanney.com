@@ -187,8 +187,13 @@ section {
     }
   }
   
-  & p {
+  & p,
+  & ul {
     margin-bottom: 0.75rem;
+  }
+
+  & ul {
+    padding-inline-start: 1.5rem;
   }
   
   & .date {
