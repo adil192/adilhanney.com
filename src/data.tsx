@@ -343,20 +343,6 @@ or through the
     ],
   },
   {
-    id: 's-pen',
-    icon: <img
-      src="projects/spencover.webp"
-      alt="S Pen"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
-    header: 'S Pen',
-    technologies: [],
-    content: __readMd('s-pen.md'),
-    date: 'February 2022',
-  },
-  {
     id: 'fabrik',
     icon: <img
       src="projects/fabrik.webp"
