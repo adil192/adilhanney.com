@@ -1,4 +1,4 @@
-This is an in-progress website set to replace the current one at https://adil.hanney.org.
+This is an in-progress website set to replace the current one at https://adilhanney.com.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
