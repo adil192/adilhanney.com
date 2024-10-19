@@ -36,9 +36,9 @@ jobs:
           path: |
             dist
             node_modules
-          key: bun-${{ hashFiles('package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          key: bun-${{ hashFiles('package.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
-            bun-${{ hashFiles('package-lock.json') }}-
+            bun-${{ hashFiles('package.json') }}-
 
       - name: Install dependencies
         run: bun install
