@@ -1,8 +1,9 @@
-import React from 'react';
-
 import { Technology } from './components/technology.tsx';
 import { MdSection } from "./components/section";
 
+/**
+ * @deprecated
+ */
 function __readMd(mdFile: string): string {
   return mdFile;
 }
