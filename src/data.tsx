@@ -65,22 +65,22 @@ Saber is available on all major platforms; find out more at [saber.adil.hanney.o
         width={1920} height={1080} />,
       <img
         key='home'
-        src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/home.png"
+        src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/1_home.png"
         aria-hidden='true' alt=''
         width={1440} height={3120} />,
       <img
         key='editor'
-        src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/editor.png"
-        aria-hidden='true' alt=''
-        width={1440} height={3120} />,
-      <img
-        key='settings'
-        src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/settings.png"
+        src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/2_editor.png"
         aria-hidden='true' alt=''
         width={1440} height={3120} />,
       <img
         key='login'
-        src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/login.png"
+        src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/3_login.png"
+        aria-hidden='true' alt=''
+        width={1440} height={3120} />,
+      <img
+        key='settings'
+        src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/4_settings.png"
         aria-hidden='true' alt=''
         width={1440} height={3120} />,
     ],
