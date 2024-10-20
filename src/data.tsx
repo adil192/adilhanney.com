@@ -21,9 +21,10 @@ export const sections: MdSection[] = [
     header: 'About me',
     technologies: [],
     content: `
-I'm a software engineer and undergrad at the University of Manchester.
+I'm a software engineer and have recently graduated from the University of Manchester with a degree in Computer Science with Mathematics.
 
-Currently, I'm mostly working on a host of architectural improvements to [Saber](#saber).
+Currently, I'm working as a Mobile and Web App Developer for Nuwa,
+the company behind [the smartest pen in the world](https://nuwapen.com/)!
 
 Find me on
 [GitHub](https://github.com/adil192)
