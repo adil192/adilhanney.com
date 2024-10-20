@@ -53,6 +53,8 @@ using technologies originally intended for gaming including
 
 After installing, you can simply open any video file with the "Upscaled VLC" app,
 no terminal or expertise required.
+
+View installation instructions on [GitHub](https://github.com/adil192/upscaled_vlc).
 `,
     date: 'September 2024',
   },
@@ -81,6 +83,8 @@ Because of this, the patcher can be (at least partially) effective
 on any game that contains ads. But in the intended game,
 the patcher can do even more like reducing the price of chests
 and upgrades and increasing the quality of the randomized rewards.
+
+See instructions on using the patcher on [GitHub](https://github.com/adil192/tower_war_patched).
 `,
     date: 'February 2024',
   },
