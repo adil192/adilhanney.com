@@ -34,6 +34,57 @@ or
     date: undefined,
   },
   {
+    id: 'upscaled_vlc',
+    icon: <img
+      src='https://raw.githubusercontent.com/adil192/upscaled_vlc/refs/heads/main/com.adilhanney.upscaled_vlc.svg'
+      alt='' aria-hidden='true'
+      width={80}
+      height={80}
+      className='mock-mac-os-icon'
+    />,
+    header: 'Upscaled VLC',
+    headerLink: 'https://github.com/adil192/upscaled_vlc',
+    technologies: [Technology.bash],
+    content: `
+A Linux-only wrapper around the [VLC](https://www.videolan.org/vlc/) media player
+that automatically upscales videos to your screen resolution
+using technologies originally intended for gaming including
+[AMD FidelityFX™ Super Resolution (FSR)](https://en.wikipedia.org/wiki/GPUOpen#FidelityFX_Super_Resolution).
+
+After installing, you can simply open any video file with the "Upscaled VLC" app,
+no terminal or expertise required.
+`,
+    date: 'September 2024',
+  },
+  {
+    id: 'tower_war_patched',
+    icon: <img
+      src='favicon.svg'
+      alt='' aria-hidden='true'
+      width={80}
+      height={80}
+      className='mock-mac-os-icon'
+    />,
+    header: 'tower_war_patched',
+    headerLink: 'https://github.com/adil192/tower_war_patched',
+    technologies: [Technology.dart, Technology.apktool],
+    content: `
+An experiment into how far an automated patcher can go for Android apps/games.
+
+In comparison to [SamsungAppsPatcher](#SamsungAppsPatcher),
+the patching method is far simpler.
+It looks through all the decompiled methods from the APK
+and replaces some of them, like making \`showAd\` do nothing
+or making \`isPremium\` always return \`true\`.
+
+Because of this, the patcher can be (at least partially) effective
+on any game that contains ads. But in the intended game,
+the patcher can do even more like reducing the price of chests
+and upgrades and increasing the quality of the randomized rewards.
+`,
+    date: 'February 2024',
+  },
+  {
     id: 'saber',
     icon: <img
       src="https://raw.githubusercontent.com/saber-notes/saber/main/assets/icon/icon_macos.png"
@@ -560,47 +611,5 @@ You can view the source on [GitHub](https://github.com/adil192/loffice-365).
     technologies: [],
     content: __readMd('collatz.md'),
     date: 'June 2020',
-  },
-  {
-    id: 'colours',
-    icon: <img
-      src="projects/colours.webp"
-      alt="Colours"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
-    header: 'Colours',
-    technologies: [],
-    content: __readMd('colours.md'),
-    date: 'before June 2020',
-  },
-  {
-    id: 'repo',
-    icon: <img
-      src="projects/repo.webp"
-      alt="Repo"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
-    header: 'Repo',
-    technologies: [],
-    content: __readMd('repo.md'),
-    date: 'before June 2020',
-  },
-  {
-    id: 'LIFE',
-    icon: <img
-      src="projects/LIFE.webp"
-      alt="LIFE"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
-    header: 'LIFE',
-    technologies: [],
-    content: __readMd('LIFE.md'),
-    date: 'before June 2020',
   },
 ];
