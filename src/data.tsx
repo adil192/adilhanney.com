@@ -71,7 +71,7 @@ View installation instructions on [GitHub](https://github.com/adil192/upscaled_v
     headerLink: 'https://github.com/adil192/tower_war_patched',
     technologies: [Technology.dart, Technology.apktool],
     content: `
-An experiment into how far an automated patcher can go for Android apps/games.
+An experiment into how far an automated game modder can go.
 
 In comparison to [SamsungAppsPatcher](#SamsungAppsPatcher),
 the patching method is far simpler.
