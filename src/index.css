@@ -89,9 +89,6 @@ img.mock-mac-os-icon-white {
   box-sizing: content-box;
 }
 
-.flex-1 { flex: 1; }
-.text-align-end { text-align: end; }
-
 header {
   /* todo: place header above card body */
 
@@ -225,12 +222,37 @@ section {
     }
 
     & h2 {
-      flex: 1;
+      flex: 1 0;
       margin-bottom: 0;
+      padding-inline-end: 0.5rem;
+    }
+
+    & .technologies {
+      flex: 1 0;
+      text-align: end;
     }
 
     & .technologies>*:last-child img {
       margin-inline-end: 0;
+    }
+
+    .date-mobile {
+      display: none;
+    }
+
+    @media (width <= 40rem) {
+      .date-desktop {
+        display: none;
+      }
+      .date-mobile {
+        display: block;
+        flex: 1 0 50vw;
+        text-align: center;
+      }
+
+      .technologies {
+        flex: none;
+      }
     }
   }
 

@@ -28,13 +28,14 @@ export function Section({ id, icon, header, headerLink, technologies, content, d
   return <section key={id} id={id}>
     <div className='section-header'>
       {icon}
-      <h2 className='flex-1'>{headerLink ? <a href={headerLink}>{header}</a> : header}</h2>
-      <p className='date'>{date}</p>
-      <div className='technologies flex-1 text-align-end'>
+      <h2>{headerLink ? <a href={headerLink}>{header}</a> : header}</h2>
+      <p className='date date-desktop'>{date}</p>
+      <div className='technologies'>
         {technologies.map(technology => (
           <TechnologyIcon key={technology} technology={technology} />
         ))}
       </div>
+      <p className='date date-mobile'>{date}</p>
     </div>
 
     <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
