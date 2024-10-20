@@ -28,8 +28,9 @@ export function Section({ id, icon, header, headerLink, technologies, content, d
   return <section key={id} id={id}>
     <div className='section-header'>
       {icon}
-      <h2>{headerLink ? <a href={headerLink}>{header}</a> : header}</h2>
-      <div className='technologies'>
+      <h2 className='flex-1'>{headerLink ? <a href={headerLink}>{header}</a> : header}</h2>
+      <p className='date'>{date}</p>
+      <div className='technologies flex-1 text-align-end'>
         {technologies.map(technology => (
           <TechnologyIcon key={technology} technology={technology} />
         ))}
@@ -37,8 +38,6 @@ export function Section({ id, icon, header, headerLink, technologies, content, d
     </div>
 
     <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
-
-    {date && <p className='date'>{date}</p>}
 
     {images && <>
       <div className='section-images'>

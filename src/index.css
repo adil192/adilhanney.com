@@ -85,6 +85,9 @@ img.mock-mac-os-icon {
   box-sizing: content-box;
 }
 
+.flex-1 { flex: 1; }
+.text-align-end { text-align: end; }
+
 header {
   /* todo: place header above card body */
 
