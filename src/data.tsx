@@ -496,8 +496,27 @@ You'll need Python installed to [play](https://github.com/adil192/top-down-zombi
     header: 'loffice-365',
     headerLink: 'https://github.com/adil192/loffice-365',
     technologies: [Technology.bash],
-    content: __readMd('loffice-365.md'),
+    content: `
+An Office 365 integration for Linux that I took over maintaining.
+
+You could open an Office file on your computer, and loffice-365 would upload it to OneDrive
+to edit with the Office 365 web apps. Then when you're done, loffice-365 would download
+the edited file back to your computer.
+
+loffice-365 used a tool called [nativefier](https://github.com/nativefier/nativefier)
+to make the desktop wrappers around the Office web apps.
+Nativefier is now unmaintained so loffice-365 could no longer be updated.
+
+You can view the source on [GitHub](https://github.com/adil192/loffice-365).
+`,
     date: 'October 2021',
+    images: [
+      <img
+        key='loffice-365-screenshot'
+        src='https://raw.githubusercontent.com/adil192/loffice-365/refs/heads/main/screenshots/loffice-365.gif'
+        aria-hidden='true' alt=''
+        width={1200} height={700} />,
+    ],
   },
   {
     id: 'SamsungAppsPatcher',
@@ -510,7 +529,7 @@ You'll need Python installed to [play](https://github.com/adil192/top-down-zombi
     />,
     header: 'Samsung Apps Patcher',
     headerLink: 'https://github.com/adil192/SamsungAppsPatcher',
-    technologies: [],
+    technologies: [Technology.bash, Technology.apktool],
     content: __readMd('SamsungAppsPatcher.md'),
     date: 'June 2021',
   },

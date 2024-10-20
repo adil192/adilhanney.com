@@ -73,8 +73,12 @@ img.mock-mac-os-icon {
   padding: calc(var(--img-size) / 10);
   border-radius: calc(var(--img-size) * 0.25);
 
+  --shadow-color: rgba(0, 0, 0, 0.2);
   --ds: calc(var(--img-size) / 50);
-  filter: drop-shadow(var(--ds) var(--ds) var(--ds) rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(var(--ds) var(--ds) var(--ds) var(--shadow-color));
+}
+img.mock-mac-os-icon-white {
+  --shadow-color: rgba(255, 255, 255, 0.2);
 }
 
 .pfp {

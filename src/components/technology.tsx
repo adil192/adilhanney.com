@@ -6,6 +6,7 @@ export enum Technology {
   js,
   python,
   bash,
+  apktool,
 }
 
 export function TechnologyIcon({ technology }: { technology: Technology }): JSX.Element {
@@ -85,6 +86,17 @@ export function TechnologyIcon({ technology }: { technology: Technology }): JSX.
           width={32}
           height={32}
           className='mock-mac-os-icon'
+        />
+      </a>
+    case Technology.apktool:
+      return <a href="https://github.com/iBotPeaches/Apktool" target="_blank" rel="noreferrer">
+        <img
+          key={technology}
+          src="technologies/apktool.svg"
+          alt={Technology[technology]}
+          width={32}
+          height={32}
+          className='mock-mac-os-icon mock-mac-os-icon-white'
         />
       </a>
   }
