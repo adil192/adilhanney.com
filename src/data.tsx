@@ -400,7 +400,7 @@ or through the
     />,
     header: 'Fabrik',
     headerLink: 'https://adil.hanney.org/fabrik/',
-    technologies: [],
+    technologies: [Technology.js],
     content: `
 A demo of the Forward And Backward Reaching
 [Inverse Kinematics](https://en.wikipedia.org/wiki/Inverse_kinematics)
@@ -438,7 +438,7 @@ You can [try it out online](https://adil.hanney.org/fabrik/).
     />,
     header: 'Clocks',
     headerLink: 'https://adil.hanney.org/clocks/',
-    technologies: [],
+    technologies: [Technology.js],
     content: `
 A page that contains every analogue clock face.
 
@@ -466,7 +466,7 @@ You can [try it out online](https://adil.hanney.org/clocks/).
     />,
     header: 'Zombies',
     headerLink: 'https://github.com/adil192/top-down-zombie-shooter',
-    technologies: [],
+    technologies: [Technology.python],
     content: `
 A top-down zombie shooter game I made for a Python coursework in university,
 featuring auto-save, a leaderboard,
@@ -495,7 +495,7 @@ You'll need Python installed to [play](https://github.com/adil192/top-down-zombi
     />,
     header: 'loffice-365',
     headerLink: 'https://github.com/adil192/loffice-365',
-    technologies: [],
+    technologies: [Technology.bash],
     content: __readMd('loffice-365.md'),
     date: 'October 2021',
   },

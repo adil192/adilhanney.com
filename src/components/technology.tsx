@@ -4,6 +4,8 @@ export enum Technology {
   pwa,
   scss,
   js,
+  python,
+  bash,
 }
 
 export function TechnologyIcon({ technology }: { technology: Technology }): JSX.Element {
@@ -57,6 +59,28 @@ export function TechnologyIcon({ technology }: { technology: Technology }): JSX.
         <img
           key={technology}
           src="technologies/js.png"
+          alt={Technology[technology]}
+          width={32}
+          height={32}
+          className='mock-mac-os-icon'
+        />
+      </a>
+    case Technology.python:
+      return <a href="https://www.python.org/" target="_blank" rel="noreferrer">
+        <img
+          key={technology}
+          src="technologies/python.svg"
+          alt={Technology[technology]}
+          width={32}
+          height={32}
+          className='mock-mac-os-icon'
+        />
+      </a>
+    case Technology.bash:
+      return <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)" target="_blank" rel="noreferrer">
+        <img
+          key={technology}
+          src="technologies/bash.svg"
           alt={Technology[technology]}
           width={32}
           height={32}
