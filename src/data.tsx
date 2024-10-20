@@ -115,7 +115,34 @@ Ricochlime is available on all major platforms and
 [online](https://ricochlime.adil.hanney.org).
 View more on [GitHub](https://github.com/adil192/ricochlime).
 `,
-    date: 'August 2023'
+    date: 'August 2023',
+    images: [
+      <img
+        key='1_home'
+        src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/newerIphoneScreenshots/1_home.png"
+        aria-hidden='true' alt=''
+        width={1284} height={2778} />,
+      <img
+        key='2_play'
+        src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/newerIphoneScreenshots/2_play.png"
+        aria-hidden='true' alt=''
+        width={1284} height={2778} />,
+      <img
+        key='4_shop'
+        src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/newerIphoneScreenshots/4_shop.png"
+        aria-hidden='true' alt=''
+        width={1284} height={2778} />,
+      <img
+        key='5_tutorial'
+        src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/newerIphoneScreenshots/5_tutorial.png"
+        aria-hidden='true' alt=''
+        width={1284} height={2778} />,
+      <img
+        key='6_settings'
+        src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/newerIphoneScreenshots/6_settings.png"
+        aria-hidden='true' alt=''
+        width={1284} height={2778} />,
+    ],
   },
   {
     id: 'timing',
@@ -250,6 +277,23 @@ The other game mode is where you can input any keyword and it will generate a pu
 [Pixabay API](https://pixabay.com/api/docs/) to get images based on the keyword and then converting them to puzzles.
 `,
     date: 'May 2022',
+    images: [
+      <img
+        key='nonogram'
+        src="https://user-images.githubusercontent.com/21128619/187011066-c679d84e-aceb-47ef-b4b9-fe50e7feb78a.gif"
+        aria-hidden='true' alt=''
+        width={1639} height={800} />,
+      <img
+        key='super_nonogram_heart'
+        src="https://raw.githubusercontent.com/adil192/super_nonogram/refs/heads/main/metadata/en-US/images/phoneScreenshots/3-heart.png"
+        aria-hidden='true' alt=''
+        width={1440} height={3120} />,
+      <img
+        key='super_nonogram_level_1'
+        src="https://raw.githubusercontent.com/adil192/super_nonogram/refs/heads/main/metadata/en-US/images/phoneScreenshots/4-level-1.png"
+        aria-hidden='true' alt=''
+        width={1440} height={3120} />,
+    ],
   },
   {
     id: 'social',
@@ -393,9 +437,23 @@ You can [try it out online](https://adil.hanney.org/fabrik/).
       className='mock-mac-os-icon'
     />,
     header: 'Clocks',
+    headerLink: 'https://adil.hanney.org/clocks/',
     technologies: [],
-    content: __readMd('clocks.md'),
+    content: `
+A page that contains every analogue clock face.
+
+Every minute, the page will pan over to the next clock face for the current time.
+
+You can [try it out online](https://adil.hanney.org/clocks/).
+`,
     date: 'November 2021',
+    images: [
+      <img
+        key='clocks-screenshot'
+        src="projects/clocks-screenshot.webp"
+        aria-hidden='true' alt=''
+        width={1920} height={1080} />,
+    ],
   },
   {
     id: 'zombies',
@@ -407,23 +465,24 @@ You can [try it out online](https://adil.hanney.org/fabrik/).
       className='mock-mac-os-icon'
     />,
     header: 'Zombies',
+    headerLink: 'https://github.com/adil192/top-down-zombie-shooter',
     technologies: [],
-    content: __readMd('zombies.md'),
+    content: `
+A top-down zombie shooter game I made for a Python coursework in university,
+featuring auto-save, a leaderboard,
+a "boss key" to quickly replace the screen with an Excel spreadsheet,
+and cheat codes.
+
+You'll need Python installed to [play](https://github.com/adil192/top-down-zombie-shooter).
+`,
     date: 'November 2021',
-  },
-  {
-    id: 'calculator',
-    icon: <img
-      src="projects/calculator.webp"
-      alt="Calculator"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
-    header: 'Calculator',
-    technologies: [],
-    content: __readMd('calculator.md'),
-    date: 'November 2021',
+    images: [
+      <img
+        key='zombies-screenshot'
+        src="https://user-images.githubusercontent.com/21128619/182282485-17a533cf-4a16-407c-b87d-5025e9a89f46.png"
+        aria-hidden='true' alt=''
+        width={1602} height={939} />,
+    ],
   },
   {
     id: 'loffice-365',
@@ -435,6 +494,7 @@ You can [try it out online](https://adil.hanney.org/fabrik/).
       className='mock-mac-os-icon'
     />,
     header: 'loffice-365',
+    headerLink: 'https://github.com/adil192/loffice-365',
     technologies: [],
     content: __readMd('loffice-365.md'),
     date: 'October 2021',
@@ -449,6 +509,7 @@ You can [try it out online](https://adil.hanney.org/fabrik/).
       className='mock-mac-os-icon'
     />,
     header: 'Samsung Apps Patcher',
+    headerLink: 'https://github.com/adil192/SamsungAppsPatcher',
     technologies: [],
     content: __readMd('SamsungAppsPatcher.md'),
     date: 'June 2021',
