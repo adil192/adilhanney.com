@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import Markdown from "react-markdown";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import remarkGfm from "remark-gfm";
 import { Dialog } from "@mui/material";
 import { useState } from "react";
 
-import { Technology, TechnologyIcon } from "./technology.tsx";
+import { TechnologyIcon } from "./technology_icon.tsx";
+import { Technology } from './technology.ts';
 
 export type MdSection = {
   id: string,

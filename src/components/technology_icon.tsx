@@ -1,13 +1,5 @@
-export enum Technology {
-  dart,
-  flutter,
-  pwa,
-  scss,
-  js,
-  python,
-  bash,
-  apktool,
-}
+import { JSX } from "react"
+import { Technology } from "./technology"
 
 export function TechnologyIcon({ technology }: { technology: Technology }): JSX.Element {
   switch (technology) {

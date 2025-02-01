@@ -1,5 +1,5 @@
-import { Technology } from './components/technology.tsx';
 import { MdSection } from "./components/section";
+import { Technology } from "./components/technology";
 
 /**
  * @deprecated
