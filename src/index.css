@@ -12,14 +12,10 @@
   --scrollbar-color: color-mix(in hsl, var(--md-sys-color-on-background) 50%, var(--md-sys-color-background));
 
   /* Font fallbacks from https://github.com/system-fonts/modern-font-stacks */
-  --body-fonts: Inter,
-    ui-sans-serif, system-ui, sans-serif;
-  --heading-fonts: Urbanist,
-    ui-rounded,
-    'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro,
-    var(--body-fonts);
-  --monospace-fonts: 'Fira Code', 'Fira Mono', 'JetBrains Mono',
-    ui-monospace,
+  --body-fonts: Inter, 'Adwaita Sans', Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, ui-sans-serif, system-ui, sans-serif;
+  --heading-fonts: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, var(--body-fonts);
+  --monospace-fonts: 'Droid Sans Mono', 'Fira Code', 'Fira Mono', 'JetBrains Mono',
+    ui-monospace, 'Ubuntu Mono', 'Adwaita Mono',
     'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
     SFMono-Regular, source-code-pro, 'Source Code Pro', Monaco, "Liberation Mono", "Courier New",
     monospace;
