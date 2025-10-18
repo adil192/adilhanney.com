@@ -3,7 +3,7 @@ import React from 'react';
 import { Section } from './components/section.tsx';
 import { sections } from './data.tsx';
 
-export default function Home() {
+export default function App() {
   /** Scrolls the menu to match the main scroll position. */
   function onMainScroll(e: React.UIEvent<HTMLElement>) {
     const main = e.currentTarget;
