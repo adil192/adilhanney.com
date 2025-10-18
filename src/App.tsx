@@ -32,9 +32,9 @@ export default function App() {
       <menu>
         {sections
           .filter(({ id }) => id !== 'about')
-          .map(({ id, icon }) => (
+          .map(({ id, icon, header }) => (
             <li key={id}>
-              <a href={`#${id}`}>
+              <a href={`#${id}`} aria-label={header}>
                 {icon}
               </a>
             </li>
