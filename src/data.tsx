@@ -349,6 +349,11 @@ The other game mode is where you can input any keyword and it will generate a pu
         aria-hidden='true' alt=''
         width={1639} height={800} />,
       <img
+        key='super_nonogram_home'
+        src="https://raw.githubusercontent.com/adil192/super_nonogram/refs/heads/main/metadata/en-US/images/phoneScreenshots/1-title.png"
+        aria-hidden='true' alt=''
+        width={1440} height={3120} />,
+      <img
         key='super_nonogram_heart'
         src="https://raw.githubusercontent.com/adil192/super_nonogram/refs/heads/main/metadata/en-US/images/phoneScreenshots/3-heart.png"
         aria-hidden='true' alt=''
