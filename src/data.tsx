@@ -162,9 +162,7 @@ with making a game in Flutter using the Flame game engine.
 I designed this to be a simple, easy, satisfying game to play.
 I often like to have something to do with my hands while I'm focusing on something else,
 and I find that games like this are perfect for that.
-The music is disabled by default, and
-the only ads in the app are a banner at the bottom of the screen,
-which I find is a good compromise between monetisation and user experience.
+The music is disabled by default and there are no ads (anymore).
 
 Ricochlime is available on all major platforms and
 [online](https://ricochlime.adil.hanney.org).
@@ -174,27 +172,27 @@ View more on [GitHub](https://github.com/adil192/ricochlime).
     images: [
       <img
         key='1_home'
-        src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/newerIphoneScreenshots/1_home.png"
+        src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/iphoneScreenshots/1_home.png"
         aria-hidden='true' alt=''
         width={1284} height={2778} />,
       <img
         key='2_play'
-        src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/newerIphoneScreenshots/2_play.png"
+        src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/iphoneScreenshots/2_play.png"
         aria-hidden='true' alt=''
         width={1284} height={2778} />,
       <img
         key='4_shop'
-        src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/newerIphoneScreenshots/4_shop.png"
+        src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/iphoneScreenshots/4_shop.png"
         aria-hidden='true' alt=''
         width={1284} height={2778} />,
       <img
         key='5_tutorial'
-        src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/newerIphoneScreenshots/5_tutorial.png"
+        src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/iphoneScreenshots/5_tutorial.png"
         aria-hidden='true' alt=''
         width={1284} height={2778} />,
       <img
         key='6_settings'
-        src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/newerIphoneScreenshots/6_settings.png"
+        src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/iphoneScreenshots/6_settings.png"
         aria-hidden='true' alt=''
         width={1284} height={2778} />,
     ],
@@ -209,7 +207,7 @@ View more on [GitHub](https://github.com/adil192/ricochlime).
       className='mock-mac-os-icon'
     />,
     header: 'Timing Trainer',
-    headerLink: 'https://adil.hanney.org/timing_flutter/',
+    headerLink: 'https://adil192.github.io/timing_flutter/',
     technologies: [Technology.flutter, Technology.pwa],
     content: `
 Timing Trainer presents you with a blinking square and you guess the time between blinks.
@@ -222,10 +220,22 @@ Later, since it was a very simple app,
 I made a cross-platform version as my first foray into Flutter.
 
 The Flutter version is available on all major platforms and
-[online](https://adil.hanney.org/timing_flutter/).
+[online](https://adil192.github.io/timing_flutter/).
 View more on [GitHub](https://github.com/adil192/timing_flutter).
 `,
-    date: 'June 2022'
+    date: 'June 2022',
+    images: [
+      <img
+        key='1_guess'
+        src="https://raw.githubusercontent.com/adil192/timing_flutter/refs/heads/main/metadata/en-US/images/iphoneScreenshots/1_guess.png"
+        aria-hidden='true' alt=''
+        width={1320} height={2868} />,
+      <img
+        key='2_settings'
+        src="https://raw.githubusercontent.com/adil192/timing_flutter/refs/heads/main/metadata/en-US/images/iphoneScreenshots/2_settings.png"
+        aria-hidden='true' alt=''
+        width={1320} height={2868} />,
+    ],
   },
   {
     id: 'BlackboardTheme',
