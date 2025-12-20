@@ -36,7 +36,7 @@ export function Section({ id, icon, header, headerLink, technologies, content, d
           <TechnologyIcon key={technology} technology={technology} />
         ))}
       </div>
-      <p className='date date-mobile'>{date}</p>
+      {date && <p className='date date-mobile'>{date}</p>}
     </div>
 
     <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
