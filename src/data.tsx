@@ -118,26 +118,31 @@ Saber is available on all major platforms; find out more at [saber.adil.hanney.o
         key='saber-landing'
         src="projects/saber-landing.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1920} height={1080} />,
       <img
         key='home'
         src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/1_home.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1440} height={3120} />,
       <img
         key='editor'
         src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/2_editor.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1440} height={3120} />,
       <img
         key='login'
         src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/3_login.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1440} height={3120} />,
       <img
         key='settings'
         src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/4_settings.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1440} height={3120} />,
     ],
   },
@@ -174,26 +179,31 @@ View more on [GitHub](https://github.com/adil192/ricochlime).
         key='1_home'
         src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/iphoneScreenshots/1_home.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1284} height={2778} />,
       <img
         key='2_play'
         src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/iphoneScreenshots/2_play.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1284} height={2778} />,
       <img
         key='4_shop'
         src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/iphoneScreenshots/4_shop.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1284} height={2778} />,
       <img
         key='5_tutorial'
         src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/iphoneScreenshots/5_tutorial.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1284} height={2778} />,
       <img
         key='6_settings'
         src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/iphoneScreenshots/6_settings.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1284} height={2778} />,
     ],
   },
@@ -229,11 +239,13 @@ View more on [GitHub](https://github.com/adil192/timing_flutter).
         key='1_guess'
         src="https://raw.githubusercontent.com/adil192/timing_flutter/refs/heads/main/metadata/en-US/images/iphoneScreenshots/1_guess.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1320} height={2868} />,
       <img
         key='2_settings'
         src="https://raw.githubusercontent.com/adil192/timing_flutter/refs/heads/main/metadata/en-US/images/iphoneScreenshots/2_settings.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1320} height={2868} />,
     ],
   },
@@ -277,36 +289,43 @@ It's hard to describe all the changes I've made, so I recommend you check out th
         key='blackboard-grid'
         src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/blackboard-grid.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1920} height={905} />,
       <img
         key='course_after'
         src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/course.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={3830} height={1077} />,
       <img
         key='quiz_after'
         src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/quiz.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={3825} height={1077} />,
       <img
         key='login_after'
         src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/login.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={3830} height={1077} />,
       <img
         key='duo_after'
         src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/duo.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={3820} height={1075} />,
       <img
         key='video_after'
         src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/video.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={3840} height={1080} />,
       <img
         key='iam_after'
         src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/iam.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={3830} height={1077} />,
     ],
   },
@@ -347,21 +366,25 @@ The other game mode is where you can input any keyword and it will generate a pu
         key='nonogram'
         src="https://user-images.githubusercontent.com/21128619/187011066-c679d84e-aceb-47ef-b4b9-fe50e7feb78a.gif"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1639} height={800} />,
       <img
         key='super_nonogram_home'
         src="https://raw.githubusercontent.com/adil192/super_nonogram/refs/heads/main/metadata/en-US/images/phoneScreenshots/1-title.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1440} height={3120} />,
       <img
         key='super_nonogram_heart'
         src="https://raw.githubusercontent.com/adil192/super_nonogram/refs/heads/main/metadata/en-US/images/phoneScreenshots/3-heart.png"
         aria-hidden='true' alt=''
+        loading="lazy"
         width={1440} height={3120} />,
       <img
         key='super_nonogram_level_1'
         src="https://raw.githubusercontent.com/adil192/super_nonogram/refs/heads/main/metadata/en-US/images/phoneScreenshots/4-level-1.png"
         aria-hidden='true' alt=''
+        loading='lazy'
         width={1440} height={3120} />,
     ],
   },
@@ -389,21 +412,25 @@ It had a Snapchat-like layout where you could swipe between the camera, chats, a
         key='social-1'
         src="projects/social-1.png"
         aria-hidden='true' alt=''
+        loading='lazy'
         width={2400} height={1080} />,
       <img
         key='social-2'
         src="projects/social-2.jpg"
         aria-hidden='true' alt=''
+        loading='lazy'
         width={2400} height={1080} />,
       <img
         key='social-3'
         src="projects/social-3.jpg"
         aria-hidden='true' alt=''
+        loading='lazy'
         width={2400} height={1080} />,
       <img
         key='social-4'
         src="projects/social-4.jpg"
         aria-hidden='true' alt=''
+        loading='lazy'
         width={2400} height={1080} />,
     ],
   },
@@ -446,16 +473,19 @@ or through the
         key='quintle.webp'
         src="https://adil.hanney.org/quintle/screenshots/quintle.webp"
         aria-hidden='true' alt=''
+        loading='lazy'
         width={1080} height={2240} />,
       <img
         key='quintle-results.webp'
         src="https://adil.hanney.org/quintle/screenshots/quintle-results.webp"
         aria-hidden='true' alt=''
+        loading='lazy'
         width={1080} height={2240} />,
       <img
         key='quintle-tutorial.webp'
         src="https://adil.hanney.org/quintle/screenshots/quintle-tutorial.webp"
         aria-hidden='true' alt=''
+        loading='lazy'
         width={1080} height={2240} />,
     ],
   },
@@ -494,6 +524,7 @@ You can [try it out online](https://adil.hanney.org/fabrik/).
         key='fabrik.gif'
         src="projects/fabrik.gif"
         aria-hidden='true' alt=''
+        loading='lazy'
         width={360} height={408} />,
     ],
   },
@@ -522,6 +553,7 @@ You can [try it out online](https://adil.hanney.org/clocks/).
         key='clocks-screenshot'
         src="projects/clocks-screenshot.webp"
         aria-hidden='true' alt=''
+        loading='lazy'
         width={1920} height={1080} />,
     ],
   },
@@ -551,6 +583,7 @@ You'll need Python installed to [play](https://github.com/adil192/top-down-zombi
         key='zombies-screenshot'
         src="https://user-images.githubusercontent.com/21128619/182282485-17a533cf-4a16-407c-b87d-5025e9a89f46.png"
         aria-hidden='true' alt=''
+        loading='lazy'
         width={1602} height={939} />,
     ],
   },
@@ -585,6 +618,7 @@ You can view the source on [GitHub](https://github.com/adil192/loffice-365).
         key='loffice-365-screenshot'
         src='https://raw.githubusercontent.com/adil192/loffice-365/refs/heads/main/screenshots/loffice-365.gif'
         aria-hidden='true' alt=''
+        loading='lazy'
         width={1200} height={700} />,
     ],
   },

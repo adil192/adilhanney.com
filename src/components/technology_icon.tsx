@@ -12,6 +12,7 @@ export function TechnologyIcon({ technology }: { technology: Technology }): JSX.
           width={32}
           height={32}
           className='mock-mac-os-icon'
+          loading='lazy'
         />
       </a>
     case Technology.flutter:
@@ -23,6 +24,7 @@ export function TechnologyIcon({ technology }: { technology: Technology }): JSX.
           width={32 * 839 / 1039}
           height={32}
           className='mock-mac-os-icon'
+          loading='lazy'
         />
       </a>
     case Technology.pwa:
@@ -34,6 +36,7 @@ export function TechnologyIcon({ technology }: { technology: Technology }): JSX.
           width={32}
           height={32}
           className='mock-mac-os-icon'
+          loading='lazy'
         />
       </a>
     case Technology.scss:
@@ -45,6 +48,7 @@ export function TechnologyIcon({ technology }: { technology: Technology }): JSX.
           width={32}
           height={32}
           className='mock-mac-os-icon'
+          loading='lazy'
         />
       </a>
     case Technology.js:
@@ -56,6 +60,7 @@ export function TechnologyIcon({ technology }: { technology: Technology }): JSX.
           width={32}
           height={32}
           className='mock-mac-os-icon'
+          loading='lazy'
         />
       </a>
     case Technology.python:
@@ -67,6 +72,7 @@ export function TechnologyIcon({ technology }: { technology: Technology }): JSX.
           width={32}
           height={32}
           className='mock-mac-os-icon'
+          loading='lazy'
         />
       </a>
     case Technology.bash:
@@ -78,6 +84,7 @@ export function TechnologyIcon({ technology }: { technology: Technology }): JSX.
           width={32}
           height={32}
           className='mock-mac-os-icon'
+          loading='lazy'
         />
       </a>
     case Technology.apktool:
@@ -89,6 +96,7 @@ export function TechnologyIcon({ technology }: { technology: Technology }): JSX.
           width={32}
           height={32}
           className='mock-mac-os-icon mock-mac-os-icon-white'
+          loading='lazy'
         />
       </a>
   }
