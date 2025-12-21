@@ -210,11 +210,10 @@ View more on [GitHub](https://github.com/adil192/ricochlime).
   {
     id: 'timing',
     icon: <img
-      src="projects/timing.svg"
+      src="https://raw.githubusercontent.com/adil192/timing_flutter/refs/heads/main/assets/icon/icon.svg"
       alt="Timing Flutter"
       width={80}
       height={80}
-      className='mock-mac-os-icon'
     />,
     header: 'Timing Trainer',
     headerLink: 'https://adil192.github.io/timing_flutter/',
