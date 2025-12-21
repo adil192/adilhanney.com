@@ -115,6 +115,9 @@ async function _downloadAndConvertImage(externalUrl, outputPath) {
   } else {
     fs.writeFileSync(outputPath, imageData);
   }
+
+  const stats = fs.statSync(outputPath);
+  console.log(`Compressed ${(imageData.length / 1024).toFixed(2)} KB -> ${(stats.size / 1024).toFixed(2)} KB: ${path.basename(outputPath)}`);
 }
 
 (async () => {
