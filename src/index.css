@@ -203,12 +203,16 @@ section {
   
   & .date {
     text-align: end;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 0;
   }
   
   & .section-header {
     display: flex;
     flex-flow: row wrap;
     margin-bottom: 1.5rem;
+    align-items: center;
 
     & img {
       --img-size: 2em;
@@ -222,6 +226,7 @@ section {
       flex: 1 0;
       margin-bottom: 0;
       padding-inline-end: 0.5rem;
+      align-content: center;
     }
 
     & .technologies {
