@@ -10,16 +10,24 @@
   --section-padding: 1.5rem;
 
   --scrollbar-color: color-mix(in hsl, var(--md-sys-color-on-background) 50%, var(--md-sys-color-background));
+}
 
-  /* Font fallbacks from https://github.com/system-fonts/modern-font-stacks */
-  --body-fonts: Inter, 'Adwaita Sans', Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, ui-sans-serif, system-ui, sans-serif;
-  --heading-fonts: var(--monospace-fonts);
-  --monospace-fonts: 'Adwaita Mono', 'Ubuntu Mono',
-    'Droid Sans Mono', 'Fira Code', 'Fira Mono', 'JetBrains Mono',
-    ui-monospace,
-    'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-    SFMono-Regular, source-code-pro, 'Source Code Pro', Monaco, "Liberation Mono", "Courier New",
-    monospace;
+@font-face {
+  font-family: 'Lilex';
+  font-weight: 100 700;
+  font-display: swap;
+  src: local('Lilex'),
+       url('../fonts/Lilex/Lilex-VariableFont_wght.woff2') format('woff2'),
+       url('../fonts/Lilex/Lilex-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lilex';
+  font-weight: 100 700;
+  font-display: swap;
+  font-style: italic;
+  src: local('Lilex'),
+       url('../fonts/Lilex/Lilex-Italic-VariableFont_wght.woff2') format('woff2'),
+       url('../fonts/Lilex/Lilex-Italic-VariableFont_wght.ttf') format('truetype');
 }
 
 * {
@@ -40,14 +48,13 @@ html {
   color-scheme: light dark;
 }
 
-body {
+html, body {
   background: var(--md-sys-color-background);
   color: var(--md-sys-color-on-background);
-  font-family: var(--body-fonts);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-fonts);
+  font-family: Lilex,
+    'Droid Sans Mono', 'Fira Code', 'Fira Mono', 'JetBrains Mono',
+    ui-monospace,
+    monospace;
 }
 
 #root {
@@ -63,7 +70,12 @@ a {
 }
 
 code {
-  font-family: var(--monospace-fonts);
+  font-family: inherit;
+  padding: 0.2em;
+  margin: -0.2em;
+  background: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  opacity: 0.9;
 }
 
 img.mock-mac-os-icon {
@@ -194,7 +206,7 @@ section {
       text-decoration: none;
     }
   }
-  
+
   & p,
   & ul {
     margin-bottom: 0.75rem;
@@ -203,14 +215,14 @@ section {
   & ul {
     padding-inline-start: 1.5rem;
   }
-  
+
   & .date {
     text-align: end;
     font-weight: 300;
     opacity: 0.9;
     margin-bottom: 0;
   }
-  
+
   & .section-header {
     display: flex;
     flex-flow: row wrap;
@@ -308,7 +320,7 @@ section {
     flex-flow: row nowrap;
     margin-bottom: 1rem;
     padding: 1rem;
-    
+
     & .spacer {
       flex: 1;
     }
