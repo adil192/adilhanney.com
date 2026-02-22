@@ -1,10 +1,6 @@
 :root {
   --surface-1: color-mix(in hsl, var(--md-sys-color-surface-tint) 5%, var(--md-sys-color-surface));
 
-  --sidebar-width: 10vw;
-  --sidebar-max-width: 5rem;
-  --sidebar-padding: 0.5rem;
-
   --border-radius: 1rem;
 
   --section-padding: 1.5rem;
@@ -37,11 +33,9 @@
 }
 
 html,
-body,
-#root {
+body {
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 html {
@@ -57,11 +51,11 @@ html, body {
     monospace;
 }
 
-#root {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
-  gap: 1rem;
+body {
+    max-width: 70rem;
+    margin: auto;
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -91,67 +85,61 @@ img.mock-mac-os-icon-white {
   --shadow-color: rgba(255, 255, 255, 0.2);
 }
 
-.pfp {
-  width: var(--sidebar-width);
-  max-width: var(--sidebar-max-width);
-  height: auto;
-  padding: var(--sidebar-padding);
-  box-sizing: content-box;
-}
-
 header {
-  /* todo: place header above card body */
-
-  align-self: center;
+  position: sticky;
+  top: 0;
   padding: 1rem;
+  background-color: var(--md-sys-color-background);
+  z-index: 1;
+
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+
+  --pfp-width: min(10vw, 5rem);
+
+  .pfp {
+    grid-area: pfp;
+    z-index: 1;
+    img {
+      width: var(--pfp-width);
+      height: auto;
+      box-sizing: content-box;
+    }
+  }
+
+  .titles {
+    grid-area: titles;
+    align-self: center;
+    background-color: inherit;
+    transform: translate(calc(-1 * var(--pfp-width) - 1rem), var(--pfp-width));
+    transition: transform 0.2s ease-out, background-color 0s ease-out 0.2s;
+  }
+  &.scrolled .titles {
+    transform: translate(0, 0);
+  }
 
   & h1+p {
     font-size: 1.5rem;
     font-weight: 300;
     font-style: italic;
     margin-top: -0.25rem;
+    margin-bottom: -0.5rem;
   }
 }
 
-menu,
 main {
   scrollbar-color: var(--scrollbar-color) transparent;
   scrollbar-width: thin;
-}
-
-menu {
-  background: var(--surface-1);
-  color: var(--md-sys-color-on-surface);
-  padding: var(--sidebar-padding);
-  border-top-right-radius: var(--border-radius);
-
-  overflow-y: auto;
-  scroll-behavior: smooth;
-
-  & li {
-    list-style: none;
-
-    & img {
-      --img-size: min(var(--sidebar-width),
-          var(--sidebar-max-width));
-      width: var(--img-size);
-      height: auto;
-    }
-  }
-}
-
-main {
   padding-left: 1rem;
-  padding-right: 2rem;
-  overflow-y: auto;
-  scroll-behavior: smooth;
+  padding-right: 1rem;
   transition: padding-left 0.1s ease-out, padding-right 0.1s ease-out;
 }
 
 @media (width <= 80rem) {
   main {
-    padding-left: 0;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 
@@ -162,10 +150,6 @@ main {
 
   body {
     background: none;
-  }
-
-  menu {
-    display: none;
   }
 
   main {
@@ -196,7 +180,6 @@ section {
   color: var(--md-sys-color-on-surface);
   padding: var(--section-padding);
   border-radius: var(--border-radius);
-  max-width: 70rem;
   margin-bottom: 2rem;
 
   & h2 {

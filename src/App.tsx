@@ -1,50 +1,48 @@
-import React from 'react';
+import { useEffect } from "react";
 
-import { Section } from './components/section.tsx';
-import { sections } from './data.tsx';
+import { Section } from "./components/section.tsx";
+import { sections } from "./data.tsx";
 
 export default function App() {
-  /** Scrolls the menu to match the main scroll position. */
-  function onMainScroll(e: React.UIEvent<HTMLElement>) {
-    const main = e.currentTarget;
-    const menu = document.querySelector('menu');
-    if (!menu) return;
+  /** Shrinks the header once we've scrolled down a little. */
+  useEffect(() => {
+    function onScroll() {
+      const header = document.querySelector("header");
+      if (!header) return;
 
-    const percent = main.scrollTop / (main.scrollHeight - main.clientHeight);
-    menu.scrollTop = percent * (menu.scrollHeight - menu.clientHeight);
-  }
+      // inertia so we don't flicker back and forth
+      const previouslyScrolled = header.classList.contains("scrolled");
+      if (previouslyScrolled) {
+        header.classList.toggle("scrolled", window.scrollY > 1);
+      } else {
+        header.classList.toggle("scrolled", window.scrollY > 5);
+      }
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <a href='#about'>
-        <img
-          src="favicon.svg"
-          alt="About me"
-          width={96}
-          height={100.85}
-          className="pfp"
-        />
-      </a>
       <header>
-        <h1>Adil Hanney</h1>
-        <p>Software Engineer</p>
+        <div className="pfp">
+          <a href="#about">
+            <img src="favicon.svg" alt="About me" width={96} height={100.85} />
+          </a>
+        </div>
+        <div className="titles">
+          <h1>Adil Hanney</h1>
+          <p>Software Engineer</p>
+        </div>
+        <div className="socials">{/*TODO: Add github and linkedin links*/}</div>
       </header>
-      <menu>
-        {sections
-          .filter(({ id }) => id !== 'about')
-          .map(({ id, icon, header }) => (
-            <li key={id}>
-              <a href={`#${id}`} aria-label={header}>
-                {icon}
-              </a>
-            </li>
-          ))}
-      </menu>
-      <main onScroll={onMainScroll}>
+      <main>
+        <div id="space-for-title" style={{height: "5rem"}}/>
         {sections.map((section) => (
           <Section key={section.id} {...section} />
         ))}
       </main>
     </>
-  )
+  );
 }
