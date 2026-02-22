@@ -1,9 +1,9 @@
 /**
  * Preprocess images for the project.
- * 
+ *
  * This script finds external images (e.g. from GitHub), downloads them,
  * and converts them to webp for better performance.
- * 
+ *
  * This is done in two stages:
  * 1. Scan `src/` to find external image URLs:
  *     - Replace the URLs in the source files with local paths.
@@ -35,17 +35,26 @@ function scanSourceFiles() {
   /** @type {ExternalImageData[]} */
   const externalImages = [];
 
-  const files = fs.readdirSync(SRC_DIR, { withFileTypes: true, recursive: true });
+  const files = fs.readdirSync(SRC_DIR, {
+    withFileTypes: true,
+    recursive: true,
+  });
   for (const file of files) {
     if (!file.isFile()) continue;
-    if (!file.name.endsWith('.js') && !file.name.endsWith('.jsx') && !file.name.endsWith('.ts') && !file.name.endsWith('.tsx')) {
+    if (
+      !file.name.endsWith('.js') &&
+      !file.name.endsWith('.jsx') &&
+      !file.name.endsWith('.ts') &&
+      !file.name.endsWith('.tsx')
+    ) {
       continue;
     }
     const filePath = path.join(file.parentPath, file.name);
     let content = fs.readFileSync(filePath, 'utf-8');
     let contentChanged = false;
 
-    const regex = /https?:\/\/(raw\.githubusercontent\.com|user-images\.githubusercontent\.com)\/[^\s'"]+/g;
+    const regex =
+      /https?:\/\/(raw\.githubusercontent\.com|user-images\.githubusercontent\.com)\/[^\s'"]+/g;
     let match;
     while ((match = regex.exec(content)) !== null) {
       const externalUrlString = match[0];
@@ -58,7 +67,9 @@ function scanSourceFiles() {
       content = content.replace(externalUrlString, webPath);
       contentChanged = true;
 
-      if (!externalImages.find(img => img.externalUrl.href === externalUrl.href)) {
+      if (
+        !externalImages.find((img) => img.externalUrl.href === externalUrl.href)
+      ) {
         externalImages.push({ externalUrl, localFilename });
       }
     }
@@ -73,7 +84,7 @@ function scanSourceFiles() {
  * Generates a local filename for the cached image based on its URL.
  * E.g. `https://raw.githubusercontent.com/USER/REPO/refs/heads/main/SOME_IMAGE.png`
  * becomes `USER_REPO_refs_heads_main_SOME_IMAGE.png`.
- * 
+ *
  * @param {URL} url
  * @param {string} desiredExt
  * @returns {string}
@@ -81,7 +92,10 @@ function scanSourceFiles() {
 function _localFilenameFromUrl(url, desiredExt) {
   const parts = url.pathname.split('/').filter(Boolean);
   const filenameWithOriginalExt = parts.join('_').replace(/\//g, '_');
-  const filenameWithDesiredExt = filenameWithOriginalExt.replace(path.extname(filenameWithOriginalExt), desiredExt);
+  const filenameWithDesiredExt = filenameWithOriginalExt.replace(
+    path.extname(filenameWithOriginalExt),
+    desiredExt,
+  );
   return filenameWithDesiredExt;
 }
 
@@ -90,10 +104,12 @@ function _localFilenameFromUrl(url, desiredExt) {
  * @param {ExternalImageData[]} images List of external images to download.
  */
 async function downloadAndConvertImages(images) {
-  await Promise.all(images.map(({ externalUrl, localFilename }) => {
-    const outputPath = path.join(OUTPUT_DIR, localFilename);
-    return _downloadAndConvertImage(externalUrl, outputPath);
-  }));
+  await Promise.all(
+    images.map(({ externalUrl, localFilename }) => {
+      const outputPath = path.join(OUTPUT_DIR, localFilename);
+      return _downloadAndConvertImage(externalUrl, outputPath);
+    }),
+  );
 }
 
 /**
@@ -104,7 +120,9 @@ async function _downloadAndConvertImage(externalUrl, outputPath) {
   console.log(`Downloading and converting: ${externalUrl.href}`);
   const response = await fetch(externalUrl.href);
   if (!response.ok) {
-    console.error(`Failed to download ${externalUrl.href}: ${response.statusText}`);
+    console.error(
+      `Failed to download ${externalUrl.href}: ${response.statusText}`,
+    );
     return;
   }
   const imageData = await response.bytes();
@@ -117,7 +135,9 @@ async function _downloadAndConvertImage(externalUrl, outputPath) {
   }
 
   const stats = fs.statSync(outputPath);
-  console.log(`Compressed ${(imageData.length / 1024).toFixed(2)} KB -> ${(stats.size / 1024).toFixed(2)} KB: ${path.basename(outputPath)}`);
+  console.log(
+    `Compressed ${(imageData.length / 1024).toFixed(2)} KB -> ${(stats.size / 1024).toFixed(2)} KB: ${path.basename(outputPath)}`,
+  );
 }
 
 (async () => {

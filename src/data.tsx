@@ -1,5 +1,5 @@
-import { MdSection } from "./components/section";
-import { Technology } from "./components/technology";
+import { MdSection } from './components/section';
+import { Technology } from './components/technology';
 
 /**
  * @deprecated
@@ -11,13 +11,15 @@ function __readMd(mdFile: string): string {
 export const sections: MdSection[] = [
   {
     id: 'about',
-    icon: <img
-      src="favicon.svg"
-      alt="About me"
-      width={132}
-      height={140}
-      className='mock-mac-os-icon'
-    />,
+    icon: (
+      <img
+        src="favicon.svg"
+        alt="About me"
+        width={132}
+        height={140}
+        className="mock-mac-os-icon"
+      />
+    ),
     header: 'About me',
     technologies: [],
     content: `
@@ -35,13 +37,16 @@ or
   },
   {
     id: 'upscaled_vlc',
-    icon: <img
-      src='https://raw.githubusercontent.com/adil192/upscaled_vlc/refs/heads/main/com.adilhanney.upscaled_vlc.svg'
-      alt='' aria-hidden='true'
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
+    icon: (
+      <img
+        src="https://raw.githubusercontent.com/adil192/upscaled_vlc/refs/heads/main/com.adilhanney.upscaled_vlc.svg"
+        alt=""
+        aria-hidden="true"
+        width={80}
+        height={80}
+        className="mock-mac-os-icon"
+      />
+    ),
     header: 'Upscaled VLC',
     headerLink: 'https://github.com/adil192/upscaled_vlc',
     technologies: [Technology.bash],
@@ -60,13 +65,16 @@ View installation instructions on [GitHub](https://github.com/adil192/upscaled_v
   },
   {
     id: 'tower_war_patched',
-    icon: <img
-      src='favicon.svg'
-      alt='' aria-hidden='true'
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
+    icon: (
+      <img
+        src="favicon.svg"
+        alt=""
+        aria-hidden="true"
+        width={80}
+        height={80}
+        className="mock-mac-os-icon"
+      />
+    ),
     header: 'tower_war_patched',
     headerLink: 'https://github.com/adil192/tower_war_patched',
     technologies: [Technology.dart, Technology.apktool],
@@ -90,12 +98,14 @@ See instructions on using the patcher on [GitHub](https://github.com/adil192/tow
   },
   {
     id: 'saber',
-    icon: <img
-      src="https://raw.githubusercontent.com/saber-notes/saber/main/assets/icon/icon_macos.png"
-      alt="Saber"
-      width={80}
-      height={80}
-    />,
+    icon: (
+      <img
+        src="https://raw.githubusercontent.com/saber-notes/saber/main/assets/icon/icon_macos.png"
+        alt="Saber"
+        width={80}
+        height={80}
+      />
+    ),
     header: 'Saber',
     headerLink: 'https://saber.adil.hanney.org',
     technologies: [Technology.flutter],
@@ -115,45 +125,62 @@ Saber is available on all major platforms; find out more at [saber.adil.hanney.o
     date: 'July 2022',
     images: [
       <img
-        key='saber-landing'
+        key="saber-landing"
         src="projects/saber-landing.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1920} height={1080} />,
+        width={1920}
+        height={1080}
+      />,
       <img
-        key='home'
+        key="home"
         src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/1_home.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1440} height={3120} />,
+        width={1440}
+        height={3120}
+      />,
       <img
-        key='editor'
+        key="editor"
         src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/2_editor.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1440} height={3120} />,
+        width={1440}
+        height={3120}
+      />,
       <img
-        key='login'
+        key="login"
         src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/3_login.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1440} height={3120} />,
+        width={1440}
+        height={3120}
+      />,
       <img
-        key='settings'
+        key="settings"
         src="https://raw.githubusercontent.com/saber-notes/saber/main/metadata/en-US/images/phoneScreenshots/4_settings.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1440} height={3120} />,
+        width={1440}
+        height={3120}
+      />,
     ],
   },
   {
     id: 'ricochlime',
-    icon: <img
-      src="https://raw.githubusercontent.com/adil192/ricochlime/main/assets/icon/icon_macos.png"
-      alt="Ricochlime"
-      width={80}
-      height={80}
-    />,
+    icon: (
+      <img
+        src="https://raw.githubusercontent.com/adil192/ricochlime/main/assets/icon/icon_macos.png"
+        alt="Ricochlime"
+        width={80}
+        height={80}
+      />
+    ),
     header: 'Ricochlime',
     headerLink: 'https://ricochlime.adil.hanney.org',
     technologies: [Technology.flutter],
@@ -176,45 +203,62 @@ View more on [GitHub](https://github.com/adil192/ricochlime).
     date: 'August 2023',
     images: [
       <img
-        key='1_home'
+        key="1_home"
         src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/iphoneScreenshots/1_home.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1284} height={2778} />,
+        width={1284}
+        height={2778}
+      />,
       <img
-        key='2_play'
+        key="2_play"
         src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/iphoneScreenshots/2_play.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1284} height={2778} />,
+        width={1284}
+        height={2778}
+      />,
       <img
-        key='4_shop'
+        key="4_shop"
         src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/iphoneScreenshots/4_shop.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1284} height={2778} />,
+        width={1284}
+        height={2778}
+      />,
       <img
-        key='5_tutorial'
+        key="5_tutorial"
         src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/iphoneScreenshots/5_tutorial.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1284} height={2778} />,
+        width={1284}
+        height={2778}
+      />,
       <img
-        key='6_settings'
+        key="6_settings"
         src="https://raw.githubusercontent.com/adil192/ricochlime/refs/heads/main/metadata/en-US/images/iphoneScreenshots/6_settings.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1284} height={2778} />,
+        width={1284}
+        height={2778}
+      />,
     ],
   },
   {
     id: 'timing',
-    icon: <img
-      src="https://raw.githubusercontent.com/adil192/timing_flutter/refs/heads/main/assets/icon/icon.svg"
-      alt="Timing Flutter"
-      width={80}
-      height={80}
-    />,
+    icon: (
+      <img
+        src="https://raw.githubusercontent.com/adil192/timing_flutter/refs/heads/main/assets/icon/icon.svg"
+        alt="Timing Flutter"
+        width={80}
+        height={80}
+      />
+    ),
     header: 'Timing Trainer',
     headerLink: 'https://adil192.github.io/timing_flutter/',
     technologies: [Technology.flutter, Technology.pwa],
@@ -235,28 +279,36 @@ View more on [GitHub](https://github.com/adil192/timing_flutter).
     date: 'June 2022',
     images: [
       <img
-        key='1_guess'
+        key="1_guess"
         src="https://raw.githubusercontent.com/adil192/timing_flutter/refs/heads/main/metadata/en-US/images/iphoneScreenshots/1_guess.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1320} height={2868} />,
+        width={1320}
+        height={2868}
+      />,
       <img
-        key='2_settings'
+        key="2_settings"
         src="https://raw.githubusercontent.com/adil192/timing_flutter/refs/heads/main/metadata/en-US/images/iphoneScreenshots/2_settings.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1320} height={2868} />,
+        width={1320}
+        height={2868}
+      />,
     ],
   },
   {
     id: 'BlackboardTheme',
-    icon: <img
-      src="projects/BlackboardTheme.webp"
-      alt="Blackboard Theme"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
+    icon: (
+      <img
+        src="projects/BlackboardTheme.webp"
+        alt="Blackboard Theme"
+        width={80}
+        height={80}
+        className="mock-mac-os-icon"
+      />
+    ),
     header: 'Blackboard Theme',
     headerLink: 'https://github.com/adil192/BlackboardTheme',
     technologies: [Technology.scss, Technology.js],
@@ -285,58 +337,81 @@ It's hard to describe all the changes I've made, so I recommend you check out th
     date: 'May 2022',
     images: [
       <img
-        key='blackboard-grid'
+        key="blackboard-grid"
         src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/blackboard-grid.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1920} height={905} />,
+        width={1920}
+        height={905}
+      />,
       <img
-        key='course_after'
+        key="course_after"
         src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/course.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={3830} height={1077} />,
+        width={3830}
+        height={1077}
+      />,
       <img
-        key='quiz_after'
+        key="quiz_after"
         src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/quiz.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={3825} height={1077} />,
+        width={3825}
+        height={1077}
+      />,
       <img
-        key='login_after'
+        key="login_after"
         src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/login.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={3830} height={1077} />,
+        width={3830}
+        height={1077}
+      />,
       <img
-        key='duo_after'
+        key="duo_after"
         src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/duo.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={3820} height={1075} />,
+        width={3820}
+        height={1075}
+      />,
       <img
-        key='video_after'
+        key="video_after"
         src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/video.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={3840} height={1080} />,
+        width={3840}
+        height={1080}
+      />,
       <img
-        key='iam_after'
+        key="iam_after"
         src="https://raw.githubusercontent.com/adil192/BlackboardTheme/main/screenshots/iam.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={3830} height={1077} />,
+        width={3830}
+        height={1077}
+      />,
     ],
   },
   {
     id: 'nonogram',
-    icon: <img
-      src="projects/nonogram.webp"
-      alt="Nonogram"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
+    icon: (
+      <img
+        src="projects/nonogram.webp"
+        alt="Nonogram"
+        width={80}
+        height={80}
+        className="mock-mac-os-icon"
+      />
+    ),
     header: 'Nonogram',
     headerLink: 'https://adil.hanney.org/nonogram/',
     technologies: [Technology.flutter, Technology.pwa],
@@ -362,40 +437,54 @@ The other game mode is where you can input any keyword and it will generate a pu
     date: 'May 2022',
     images: [
       <img
-        key='nonogram'
+        key="nonogram"
         src="https://user-images.githubusercontent.com/21128619/187011066-c679d84e-aceb-47ef-b4b9-fe50e7feb78a.gif"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1639} height={800} />,
+        width={1639}
+        height={800}
+      />,
       <img
-        key='super_nonogram_home'
+        key="super_nonogram_home"
         src="https://raw.githubusercontent.com/adil192/super_nonogram/refs/heads/main/metadata/en-US/images/phoneScreenshots/1-title.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1440} height={3120} />,
+        width={1440}
+        height={3120}
+      />,
       <img
-        key='super_nonogram_heart'
+        key="super_nonogram_heart"
         src="https://raw.githubusercontent.com/adil192/super_nonogram/refs/heads/main/metadata/en-US/images/phoneScreenshots/3-heart.png"
-        aria-hidden='true' alt=''
+        aria-hidden="true"
+        alt=""
         loading="lazy"
-        width={1440} height={3120} />,
+        width={1440}
+        height={3120}
+      />,
       <img
-        key='super_nonogram_level_1'
+        key="super_nonogram_level_1"
         src="https://raw.githubusercontent.com/adil192/super_nonogram/refs/heads/main/metadata/en-US/images/phoneScreenshots/4-level-1.png"
-        aria-hidden='true' alt=''
-        loading='lazy'
-        width={1440} height={3120} />,
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={1440}
+        height={3120}
+      />,
     ],
   },
   {
     id: 'social',
-    icon: <img
-      src="projects/social.webp"
-      alt="Social"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
+    icon: (
+      <img
+        src="projects/social.webp"
+        alt="Social"
+        width={80}
+        height={80}
+        className="mock-mac-os-icon"
+      />
+    ),
     header: 'Social Media Demo',
     technologies: [Technology.pwa],
     content: `
@@ -408,40 +497,54 @@ It had a Snapchat-like layout where you could swipe between the camera, chats, a
     date: 'April 2022',
     images: [
       <img
-        key='social-1'
+        key="social-1"
         src="projects/social-1.png"
-        aria-hidden='true' alt=''
-        loading='lazy'
-        width={2400} height={1080} />,
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={2400}
+        height={1080}
+      />,
       <img
-        key='social-2'
+        key="social-2"
         src="projects/social-2.jpg"
-        aria-hidden='true' alt=''
-        loading='lazy'
-        width={2400} height={1080} />,
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={2400}
+        height={1080}
+      />,
       <img
-        key='social-3'
+        key="social-3"
         src="projects/social-3.jpg"
-        aria-hidden='true' alt=''
-        loading='lazy'
-        width={2400} height={1080} />,
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={2400}
+        height={1080}
+      />,
       <img
-        key='social-4'
+        key="social-4"
         src="projects/social-4.jpg"
-        aria-hidden='true' alt=''
-        loading='lazy'
-        width={2400} height={1080} />,
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={2400}
+        height={1080}
+      />,
     ],
   },
   {
     id: 'quintle',
-    icon: <img
-      src="projects/quintle.png"
-      alt="Quintle"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
+    icon: (
+      <img
+        src="projects/quintle.png"
+        alt="Quintle"
+        width={80}
+        height={80}
+        className="mock-mac-os-icon"
+      />
+    ),
     header: 'Quintle',
     headerLink: 'https://adil.hanney.org/quintle/',
     technologies: [Technology.pwa],
@@ -469,34 +572,45 @@ or through the
     date: 'February 2022',
     images: [
       <img
-        key='quintle.webp'
+        key="quintle.webp"
         src="https://adil.hanney.org/quintle/screenshots/quintle.webp"
-        aria-hidden='true' alt=''
-        loading='lazy'
-        width={1080} height={2240} />,
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={1080}
+        height={2240}
+      />,
       <img
-        key='quintle-results.webp'
+        key="quintle-results.webp"
         src="https://adil.hanney.org/quintle/screenshots/quintle-results.webp"
-        aria-hidden='true' alt=''
-        loading='lazy'
-        width={1080} height={2240} />,
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={1080}
+        height={2240}
+      />,
       <img
-        key='quintle-tutorial.webp'
+        key="quintle-tutorial.webp"
         src="https://adil.hanney.org/quintle/screenshots/quintle-tutorial.webp"
-        aria-hidden='true' alt=''
-        loading='lazy'
-        width={1080} height={2240} />,
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={1080}
+        height={2240}
+      />,
     ],
   },
   {
     id: 'fabrik',
-    icon: <img
-      src="projects/fabrik.webp"
-      alt="Fabrik"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
+    icon: (
+      <img
+        src="projects/fabrik.webp"
+        alt="Fabrik"
+        width={80}
+        height={80}
+        className="mock-mac-os-icon"
+      />
+    ),
     header: 'Fabrik',
     headerLink: 'https://adil.hanney.org/fabrik/',
     technologies: [Technology.js],
@@ -520,22 +634,27 @@ You can [try it out online](https://adil.hanney.org/fabrik/).
     date: 'January 2022',
     images: [
       <img
-        key='fabrik.gif'
+        key="fabrik.gif"
         src="projects/fabrik.gif"
-        aria-hidden='true' alt=''
-        loading='lazy'
-        width={360} height={408} />,
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={360}
+        height={408}
+      />,
     ],
   },
   {
     id: 'clocks',
-    icon: <img
-      src="projects/clocks.webp"
-      alt="Clocks"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
+    icon: (
+      <img
+        src="projects/clocks.webp"
+        alt="Clocks"
+        width={80}
+        height={80}
+        className="mock-mac-os-icon"
+      />
+    ),
     header: 'Clocks',
     headerLink: 'https://adil.hanney.org/clocks/',
     technologies: [Technology.js],
@@ -549,22 +668,27 @@ You can [try it out online](https://adil.hanney.org/clocks/).
     date: 'November 2021',
     images: [
       <img
-        key='clocks-screenshot'
+        key="clocks-screenshot"
         src="projects/clocks-screenshot.webp"
-        aria-hidden='true' alt=''
-        loading='lazy'
-        width={1920} height={1080} />,
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={1920}
+        height={1080}
+      />,
     ],
   },
   {
     id: 'zombies',
-    icon: <img
-      src="projects/zombies.webp"
-      alt="Zombies"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
+    icon: (
+      <img
+        src="projects/zombies.webp"
+        alt="Zombies"
+        width={80}
+        height={80}
+        className="mock-mac-os-icon"
+      />
+    ),
     header: 'Zombies',
     headerLink: 'https://github.com/adil192/top-down-zombie-shooter',
     technologies: [Technology.python],
@@ -579,22 +703,27 @@ You'll need Python installed to [play](https://github.com/adil192/top-down-zombi
     date: 'November 2021',
     images: [
       <img
-        key='zombies-screenshot'
+        key="zombies-screenshot"
         src="https://user-images.githubusercontent.com/21128619/182282485-17a533cf-4a16-407c-b87d-5025e9a89f46.png"
-        aria-hidden='true' alt=''
-        loading='lazy'
-        width={1602} height={939} />,
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={1602}
+        height={939}
+      />,
     ],
   },
   {
     id: 'loffice-365',
-    icon: <img
-      src="projects/loffice-365.webp"
-      alt="loffice-365"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
+    icon: (
+      <img
+        src="projects/loffice-365.webp"
+        alt="loffice-365"
+        width={80}
+        height={80}
+        className="mock-mac-os-icon"
+      />
+    ),
     header: 'loffice-365',
     headerLink: 'https://github.com/adil192/loffice-365',
     technologies: [Technology.bash],
@@ -614,22 +743,27 @@ You can view the source on [GitHub](https://github.com/adil192/loffice-365).
     date: 'October 2021',
     images: [
       <img
-        key='loffice-365-screenshot'
-        src='https://raw.githubusercontent.com/adil192/loffice-365/refs/heads/main/screenshots/loffice-365.gif'
-        aria-hidden='true' alt=''
-        loading='lazy'
-        width={1200} height={700} />,
+        key="loffice-365-screenshot"
+        src="https://raw.githubusercontent.com/adil192/loffice-365/refs/heads/main/screenshots/loffice-365.gif"
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={1200}
+        height={700}
+      />,
     ],
   },
   {
     id: 'SamsungAppsPatcher',
-    icon: <img
-      src="projects/SamsungAppsPatcher.webp"
-      alt="Samsung Apps Patcher"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
+    icon: (
+      <img
+        src="projects/SamsungAppsPatcher.webp"
+        alt="Samsung Apps Patcher"
+        width={80}
+        height={80}
+        className="mock-mac-os-icon"
+      />
+    ),
     header: 'Samsung Apps Patcher',
     headerLink: 'https://github.com/adil192/SamsungAppsPatcher',
     technologies: [Technology.bash, Technology.apktool],
@@ -638,13 +772,15 @@ You can view the source on [GitHub](https://github.com/adil192/loffice-365).
   },
   {
     id: 'S20Debloat',
-    icon: <img
-      src="projects/S20Debloat.webp"
-      alt="S20 Debloat"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
+    icon: (
+      <img
+        src="projects/S20Debloat.webp"
+        alt="S20 Debloat"
+        width={80}
+        height={80}
+        className="mock-mac-os-icon"
+      />
+    ),
     header: 'S20 Debloat',
     technologies: [],
     content: __readMd('S20Debloat.md'),
@@ -652,13 +788,15 @@ You can view the source on [GitHub](https://github.com/adil192/loffice-365).
   },
   {
     id: 'collatz',
-    icon: <img
-      src="projects/collatz.webp"
-      alt="Collatz"
-      width={80}
-      height={80}
-      className='mock-mac-os-icon'
-    />,
+    icon: (
+      <img
+        src="projects/collatz.webp"
+        alt="Collatz"
+        width={80}
+        height={80}
+        className="mock-mac-os-icon"
+      />
+    ),
     header: 'Collatz',
     technologies: [],
     content: __readMd('collatz.md'),
