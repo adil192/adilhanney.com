@@ -138,9 +138,7 @@ header {
     align-self: center;
     background-color: inherit;
     transform: translate(calc(-1 * var(--pfp-width) - 1rem), var(--pfp-width));
-    transition:
-      transform 0.2s ease-out,
-      background-color 0s ease-out 0.2s;
+    transition: transform 0.2s ease-out;
   }
   &.scrolled .titles {
     transform: translate(0, 0);
