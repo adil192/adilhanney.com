@@ -2,16 +2,24 @@
   --md-sys-color-background: hsl(205 9% 11%);
   --md-sys-color-surface: hsl(205 14% 14%);
   --md-sys-color-on-surface: hsl(205 9% 89%);
+  --md-sys-color-border: hsl(205 9% 89% / var(--border-alpha));
 }
 @media (prefers-color-scheme: light) {
   :root {
     --md-sys-color-background: hsl(225 50% 95.7%);
     --md-sys-color-surface: hsl(225 100% 99.2%);
     --md-sys-color-on-surface: hsl(225 9% 11%);
+    --md-sys-color-border: hsl(225 100% 11% / var(--border-alpha));
+  }
+}
+@media (prefers-contrast: more) {
+  :root {
+    --border-alpha: 0.9;
   }
 }
 
 :root {
+  --border-alpha: 0.3;
   --border-radius: 1rem;
 
   --section-padding: 1.5rem;
@@ -200,6 +208,7 @@ section {
   color: var(--md-sys-color-on-surface);
   padding: var(--section-padding);
   border-radius: var(--border-radius);
+  border: 0.1px solid var(--md-sys-color-border);
   margin-bottom: 2rem;
 
   & h2 {
