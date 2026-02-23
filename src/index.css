@@ -309,6 +309,7 @@ section {
       height: var(--img-size);
       width: auto;
       border-radius: var(--border-radius);
+      border: 0.1px solid var(--md-sys-color-border);
     }
   }
 }
