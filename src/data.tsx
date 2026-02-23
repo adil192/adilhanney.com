@@ -179,6 +179,7 @@ Saber is available on all major platforms; find out more at [saber.adil.hanney.o
         alt="Ricochlime"
         width={80}
         height={80}
+        loading="lazy"
       />
     ),
     header: 'Ricochlime',
@@ -257,6 +258,7 @@ View more on [GitHub](https://github.com/adil192/ricochlime).
         alt="Timing Flutter"
         width={80}
         height={80}
+        loading="lazy"
       />
     ),
     header: 'Timing Trainer',
@@ -307,6 +309,7 @@ View more on [GitHub](https://github.com/adil192/timing_flutter).
         width={80}
         height={80}
         className="mock-mac-os-icon"
+        loading="lazy"
       />
     ),
     header: 'Blackboard Theme',
@@ -410,6 +413,7 @@ It's hard to describe all the changes I've made, so I recommend you check out th
         width={80}
         height={80}
         className="mock-mac-os-icon"
+        loading="lazy"
       />
     ),
     header: 'Nonogram',
@@ -483,6 +487,7 @@ The other game mode is where you can input any keyword and it will generate a pu
         width={80}
         height={80}
         className="mock-mac-os-icon"
+        loading="lazy"
       />
     ),
     header: 'Social Media Demo',
@@ -543,6 +548,7 @@ It had a Snapchat-like layout where you could swipe between the camera, chats, a
         width={80}
         height={80}
         className="mock-mac-os-icon"
+        loading="lazy"
       />
     ),
     header: 'Quintle',
@@ -609,6 +615,7 @@ or through the
         width={80}
         height={80}
         className="mock-mac-os-icon"
+        loading="lazy"
       />
     ),
     header: 'Fabrik',
@@ -653,6 +660,7 @@ You can [try it out online](https://adil.hanney.org/fabrik/).
         width={80}
         height={80}
         className="mock-mac-os-icon"
+        loading="lazy"
       />
     ),
     header: 'Clocks',
@@ -687,6 +695,7 @@ You can [try it out online](https://adil.hanney.org/clocks/).
         width={80}
         height={80}
         className="mock-mac-os-icon"
+        loading="lazy"
       />
     ),
     header: 'Zombies',
@@ -722,6 +731,7 @@ You'll need Python installed to [play](https://github.com/adil192/top-down-zombi
         width={80}
         height={80}
         className="mock-mac-os-icon"
+        loading="lazy"
       />
     ),
     header: 'loffice-365',
@@ -762,6 +772,7 @@ You can view the source on [GitHub](https://github.com/adil192/loffice-365).
         width={80}
         height={80}
         className="mock-mac-os-icon"
+        loading="lazy"
       />
     ),
     header: 'Samsung Apps Patcher',
@@ -779,6 +790,7 @@ You can view the source on [GitHub](https://github.com/adil192/loffice-365).
         width={80}
         height={80}
         className="mock-mac-os-icon"
+        loading="lazy"
       />
     ),
     header: 'S20 Debloat',
@@ -795,6 +807,7 @@ You can view the source on [GitHub](https://github.com/adil192/loffice-365).
         width={80}
         height={80}
         className="mock-mac-os-icon"
+        loading="lazy"
       />
     ),
     header: 'Collatz',
