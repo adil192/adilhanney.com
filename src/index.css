@@ -17,6 +17,11 @@
     --border-alpha: 0.9;
   }
 }
+@media (prefers-color-scheme: dark) {
+  img[data-invertible] {
+    filter: url('#invert-filter');
+  }
+}
 
 :root {
   --border-alpha: 0.15;
@@ -101,13 +106,6 @@ img.mock-mac-os-icon {
   /* Matches the padding of a macOS icon */
   padding: calc(var(--img-size) / 10);
   border-radius: calc(var(--img-size) * 0.25);
-
-  --shadow-color: rgba(0, 0, 0, 0.2);
-  --ds: calc(var(--img-size) / 50);
-  filter: drop-shadow(var(--ds) var(--ds) var(--ds) var(--shadow-color));
-}
-img.mock-mac-os-icon-white {
-  --shadow-color: rgba(255, 255, 255, 0.2);
 }
 
 header {
@@ -371,11 +369,5 @@ section {
         border-radius: var(--border-radius);
       }
     }
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  img[src$='pwa.svg'] {
-    filter: invert(1) hue-rotate(166deg);
   }
 }

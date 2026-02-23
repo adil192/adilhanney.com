@@ -50,6 +50,7 @@ export function TechnologyIcon({
             height={32}
             className="mock-mac-os-icon"
             loading="lazy"
+            data-invertible
           />
         </a>
       );
@@ -130,7 +131,7 @@ export function TechnologyIcon({
             alt={Technology[technology]}
             width={32}
             height={32}
-            className="mock-mac-os-icon mock-mac-os-icon-white"
+            className="mock-mac-os-icon"
             loading="lazy"
           />
         </a>
