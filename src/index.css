@@ -1,4 +1,19 @@
 :root {
+  --md-sys-color-background: #191c1e;
+  --md-sys-color-surface: #191c1e;
+  --md-sys-color-on-surface: #e1e2e5;
+  --md-sys-color-surface-tint: #7ed0ff;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --md-sys-color-background: #fbfcff;
+    --md-sys-color-surface: #fbfcff;
+    --md-sys-color-on-surface: #191c1e;
+    --md-sys-color-surface-tint: #00658b;
+  }
+}
+
+:root {
   --surface-1: color-mix(
     in hsl,
     var(--md-sys-color-surface-tint) 5%,
@@ -11,7 +26,7 @@
 
   --scrollbar-color: color-mix(
     in hsl,
-    var(--md-sys-color-on-background) 50%,
+    var(--md-sys-color-on-surface) 50%,
     var(--md-sys-color-background)
   );
 }
@@ -55,7 +70,7 @@ html {
 html,
 body {
   background: var(--md-sys-color-background);
-  color: var(--md-sys-color-on-background);
+  color: var(--md-sys-color-on-surface);
   font-family:
     Lilex, 'Droid Sans Mono', 'Fira Code', 'Fira Mono', 'JetBrains Mono',
     ui-monospace, monospace;
@@ -78,7 +93,7 @@ code {
   padding: 0.2em;
   margin: -0.2em;
   background: var(--md-sys-color-background);
-  color: var(--md-sys-color-on-background);
+  color: var(--md-sys-color-on-surface);
   opacity: 0.9;
 }
 
