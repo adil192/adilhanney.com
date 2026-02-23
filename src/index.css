@@ -222,6 +222,7 @@ section {
   & .date {
     text-align: end;
     font-weight: 300;
+    font-style: italic;
     opacity: 0.9;
     margin-bottom: 0;
   }
