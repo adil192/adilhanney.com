@@ -310,6 +310,7 @@ View more on [GitHub](https://github.com/adil192/timing_flutter).
         height={80}
         className="mock-mac-os-icon"
         loading="lazy"
+        data-invertible
       />
     ),
     header: 'Blackboard Theme',
@@ -414,6 +415,7 @@ It's hard to describe all the changes I've made, so I recommend you check out th
         height={80}
         className="mock-mac-os-icon"
         loading="lazy"
+        data-invertible
       />
     ),
     header: 'Nonogram',
@@ -616,6 +618,7 @@ or through the
         height={80}
         className="mock-mac-os-icon"
         loading="lazy"
+        data-invertible
       />
     ),
     header: 'Fabrik',
@@ -808,6 +811,7 @@ You can view the source on [GitHub](https://github.com/adil192/loffice-365).
         height={80}
         className="mock-mac-os-icon"
         loading="lazy"
+        data-invertible
       />
     ),
     header: 'Collatz',
