@@ -5,8 +5,8 @@
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --md-sys-color-background: hsl(225 100% 99.2%);
-    --md-sys-color-surface: hsl(225 100% 95.7%);
+    --md-sys-color-background: hsl(225 50% 95.7%);
+    --md-sys-color-surface: hsl(225 100% 99.2%);
     --md-sys-color-on-surface: hsl(225 9% 11%);
   }
 }
