@@ -785,23 +785,6 @@ You can view the source on [GitHub](https://github.com/adil192/loffice-365).
     date: 'June 2021',
   },
   {
-    id: 'S20Debloat',
-    icon: (
-      <img
-        src="projects/S20Debloat.webp"
-        alt="S20 Debloat"
-        width={80}
-        height={80}
-        className="mock-mac-os-icon"
-        loading="lazy"
-      />
-    ),
-    header: 'S20 Debloat',
-    technologies: [],
-    content: __readMd('S20Debloat.md'),
-    date: 'May 2021',
-  },
-  {
     id: 'collatz',
     icon: (
       <img
@@ -815,6 +798,7 @@ You can view the source on [GitHub](https://github.com/adil192/loffice-365).
       />
     ),
     header: 'Collatz',
+    headerLink: 'https://adil.hanney.org/collatz/',
     technologies: [],
     content: __readMd('collatz.md'),
     date: 'June 2020',
