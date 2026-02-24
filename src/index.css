@@ -19,6 +19,7 @@
 }
 @media (prefers-color-scheme: dark) {
   img[data-invertible] {
+    filter: invert(1);
     filter: url('#invert-filter');
   }
 }
