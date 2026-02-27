@@ -114,6 +114,26 @@ Check it out on [GitHub](https://github.com/adil192/no_more_background) or
 [Flathub](https://flathub.org/en/apps/com.adilhanney.no_more_background) (the Linux app store).
 `,
     date: 'October 2025',
+    images: [
+      <img
+        key="connect"
+        src="https://raw.githubusercontent.com/adil192/no_more_background/refs/heads/main/metadata/en-US/images/flathubScreenshots/1_connect.png"
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={1050}
+        height={750}
+      />,
+      <img
+        key="apps"
+        src="https://raw.githubusercontent.com/adil192/no_more_background/refs/heads/main/metadata/en-US/images/flathubScreenshots/2_apps.png"
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={1050}
+        height={750}
+      />,
+    ]
   },
   {
     id: 'upscaled_vlc',
