@@ -36,7 +36,6 @@ or
         alt="COSMIC"
         width={80}
         height={80}
-        loading="lazy"
         data-invertible
       />
     ),
@@ -146,6 +145,7 @@ Check it out on [GitHub](https://github.com/adil192/no_more_background) or
         width={80}
         height={80}
         className="mock-mac-os-icon"
+        loading="lazy"
       />
     ),
     header: 'Upscaled VLC',
