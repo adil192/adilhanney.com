@@ -781,7 +781,26 @@ You can view the source on [GitHub](https://github.com/adil192/loffice-365).
     header: 'Samsung Apps Patcher',
     headerLink: 'https://github.com/adil192/SamsungAppsPatcher',
     technologies: [Technology.bash, Technology.apktool],
-    content: __readMd('SamsungAppsPatcher.md'),
+    content: `
+A way to get Samsung's wearable apps to work on a rooted phone.
+
+[Rooting](https://en.wikipedia.org/wiki/Rooting_(Android)) grants you
+superuser access to your phone, which can extend its lifespan and unlock new
+functionality.
+But Samsung is markedly against this and completely blocks you from using your wearable devices,
+like smartwatches and earbuds, if your phone is rooted.
+
+SamsungAppsPatcher is a script aiming to bypass this artificial restriction,
+letting you use the devices you bought again.
+
+It decompiles the relevant apps, patches them, and recompiles them all in one command.
+Patches include disabling Samsung Attestation Key (SAK), removing Knox and root checks,
+bypassing certificate checks, unblocking Huawei devices, unblocking tablets, and more.
+
+The project came to an end after I moved on from Samsung devices
+(in part due to these practices), and since this approach stopped working after
+they switched their smartwatches from Tizen to Wear OS.
+`,
     date: 'June 2021',
   },
   {
