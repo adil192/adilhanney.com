@@ -57,7 +57,8 @@ These pull requests have already been released as of COSMIC epoch-1.0.8:
 - https://github.com/pop-os/cosmic-session/pull/186
 - and some other small ones
 
-See these screenshots below for a pink-themed dark mode and a green-themed light mode.
+See these screenshots below for gaudy examples of what the user's theme
+might look like, with a pink-themed dark mode and a green-themed light mode.
 `,
     date: `February 2026`,
     images: [
