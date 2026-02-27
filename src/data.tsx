@@ -41,15 +41,15 @@ or
       />
     ),
     header: 'Qt theming in COSMIC',
-    headerLink: 'https://system76.com/cosmic',
     technologies: [Technology.rust],
     content: `
-I contributed to the COSMIC desktop environment to allow apps written with the
+I contributed to the [COSMIC](https://system76.com/cosmic)
+desktop environment to allow apps written with the
 Qt framework to conform to the user's theme, including accent colors and
 light/dark mode.
 
-Without these changes, a good portion of Linux apps would be stuck with their
-default light mode which can look out of place on dark themes.
+Without these changes, a good portion of Linux apps would be stuck in their
+default light mode which can be quite jarring especially at night.
 
 These pull requests have already been released as of COSMIC epoch-1.0.8:
 - https://github.com/pop-os/libcosmic/pull/1121
