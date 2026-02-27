@@ -69,6 +69,7 @@ html {
   color-scheme: dark light;
   overflow-y: auto;
   scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 
 html,
