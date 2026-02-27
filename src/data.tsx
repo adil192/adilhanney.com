@@ -16,10 +16,10 @@ export const sections: MdSection[] = [
     header: 'About me',
     technologies: [],
     content: `
-I'm a software engineer and have recently graduated from the University of Manchester with a degree in Computer Science with Mathematics.
+I'm a software engineer with a bachelor's degree in Computer Science with Mathematics from the University of Manchester.
 
-Currently, I'm working as a Mobile and Web App Developer for Nuwa,
-the company behind [the smartest pen in the world](https://nuwapen.com/)!
+You may know me as the developer of [Saber](#saber) or from my work across various other open source projects.
+I love all things [Flutter](https://flutter.dev/), but I'm starting to see the appeal of Rust too 🙃.
 
 Find me on
 [GitHub](https://github.com/adil192)
