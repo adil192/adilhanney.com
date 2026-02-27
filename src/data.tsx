@@ -1,13 +1,6 @@
 import { MdSection } from './components/section';
 import { Technology } from './components/technology';
 
-/**
- * @deprecated
- */
-function __readMd(mdFile: string): string {
-  return mdFile;
-}
-
 export const sections: MdSection[] = [
   {
     id: 'about',
@@ -819,7 +812,16 @@ they switched their smartwatches from Tizen to Wear OS.
     header: 'Collatz',
     headerLink: 'https://adil.hanney.org/collatz/',
     technologies: [],
-    content: __readMd('collatz.md'),
+    content: `
+An online tool to check the Collatz conjecture against any number.
+
+The Collatz conjecture is an unsolved problem in mathematics claiming
+that if you apply two simple operations to a number repeatedly, it always
+ends up at 1.
+
+I made this as part of a presentation I made for A-Level Maths.
+[Check it out online](https://adil.hanney.org/collatz/)
+`,
     date: 'June 2020',
   },
 ];
