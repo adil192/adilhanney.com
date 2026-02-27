@@ -29,6 +29,93 @@ or
     date: undefined,
   },
   {
+    id: 'cosmic_qt',
+    icon: (
+      <img
+        src="projects/cosmic.svg"
+        alt="COSMIC"
+        width={80}
+        height={80}
+        loading="lazy"
+        data-invertible
+      />
+    ),
+    header: 'Qt theming in COSMIC',
+    headerLink: 'https://system76.com/cosmic',
+    technologies: [Technology.rust],
+    content: `
+I contributed to the COSMIC desktop environment to allow apps written with the
+Qt framework to conform to the user's theme, including accent colors and
+light/dark mode.
+
+Without these changes, a good portion of Linux apps would be stuck with their
+default light mode which can look out of place on dark themes.
+
+These pull requests have already been released as of COSMIC epoch-1.0.8:
+- https://github.com/pop-os/libcosmic/pull/1121
+- https://github.com/pop-os/cosmic-settings-daemon/pull/128
+- https://github.com/pop-os/cosmic-session/pull/186
+- and some other small ones
+
+See these screenshots below for a pink-themed dark mode and a green-themed light mode.
+`,
+    date: `February 2026`,
+    images: [
+      <img
+        key="cosmic-pink"
+        src="projects/cosmic-pink.webp"
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={1920}
+        height={1200}
+      />,
+      <img
+        key="cosmic-green"
+        src="projects/cosmic-green.webp"
+        aria-hidden="true"
+        alt=""
+        loading="lazy"
+        width={1920}
+        height={1200}
+      />,
+    ],
+  },
+  {
+    id: 'no_more_background',
+    icon: (
+      <img
+        src="https://raw.githubusercontent.com/adil192/no_more_background/main/assets/icon/icon.svg"
+        alt="NoMoreBackground"
+        width={80}
+        height={80}
+        loading="lazy"
+      />
+    ),
+    header: 'NoMoreBackground',
+    headerLink: 'https://github.com/adil192/no_more_background',
+    technologies: [Technology.flutter],
+    content: `
+A tool to manage which apps can run in the background.
+
+You probably don't need some random takeaway app doing anything in the
+background. And maybe you don't want that mobile game wasting your data
+when you're not using it.
+
+NoMoreBackground gives you a list of your apps and lets you choose which
+of them you want having background permissions, all on one screen, to help
+you get the most out of your battery.
+
+And the best part? When you're done,
+you can close NoMoreBackground and move on with your life.
+No need to keep "optimizing" like other tools: set and forget.
+
+Check it out on [GitHub](https://github.com/adil192/no_more_background) or
+[Flathub](https://flathub.org/en/apps/com.adilhanney.no_more_background) (the Linux app store).
+`,
+    date: 'October 2025',
+  },
+  {
     id: 'upscaled_vlc',
     icon: (
       <img

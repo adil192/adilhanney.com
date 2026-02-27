@@ -136,5 +136,23 @@ export function TechnologyIcon({
           />
         </a>
       );
+    case Technology.rust:
+      return (
+        <a
+          href="https://rust-lang.org/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            key={technology}
+            src="technologies/rust.svg"
+            alt={Technology[technology]}
+            width={32}
+            height={32}
+            loading="lazy"
+            data-invertible
+          />
+        </a>
+      );
   }
 }

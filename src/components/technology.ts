@@ -7,4 +7,5 @@ export enum Technology {
   python,
   bash,
   apktool,
+  rust,
 }
