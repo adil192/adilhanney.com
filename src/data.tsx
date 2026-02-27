@@ -108,7 +108,7 @@ you get the most out of your battery.
 
 And the best part? When you're done,
 you can close NoMoreBackground and move on with your life.
-No need to keep "optimizing" like other tools: set and forget.
+No need to "optimize" every day like some other tools: set and forget!
 
 Check it out on [GitHub](https://github.com/adil192/no_more_background) or
 [Flathub](https://flathub.org/en/apps/com.adilhanney.no_more_background) (the Linux app store).
