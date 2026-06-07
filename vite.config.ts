@@ -1,9 +1,6 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
-const ReactCompilerConfig = {
-  target: '19',
-};
+import react, { reactCompilerPreset } from '@vitejs/plugin-react';
+import babel from '@rolldown/plugin-babel';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,10 +9,11 @@ export default defineConfig({
     port: 8000,
   },
   plugins: [
-    react({
-      babel: {
-        plugins: [['babel-plugin-react-compiler', ReactCompilerConfig]],
-      },
+    react(),
+    babel({
+      presets: [reactCompilerPreset({
+        panicThreshold: 'all_errors'
+      })]
     }),
   ],
 });
