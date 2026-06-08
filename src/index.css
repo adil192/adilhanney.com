@@ -109,7 +109,7 @@ header {
   position: sticky;
   top: 0;
   padding: 1rem;
-  padding-inline: calc((100vw - var(--content-width)) / 2 + 1rem);
+  padding-inline: calc(max(0px, (100vw - var(--content-width)) / 2) + 1rem);
   transition: background-color 0.2s ease-out;
   z-index: 1;
   backdrop-filter: blur(128px);
