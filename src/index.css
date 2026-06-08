@@ -2,6 +2,7 @@
   --border-alpha: 0.15;
   --border-radius: 1rem;
   --section-padding: 1.5rem;
+  --content-width: 70rem;
 }
 :root {
   --md-sys-color-background: hsla(196 47.8% 4.5% / 0.65);
@@ -11,7 +12,7 @@
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --md-sys-color-background: hsla(196 25.3% 85.3% / 0.6);
+    --md-sys-color-background: hsla(196 25.3% 85.3% / 0.65);
     --md-sys-color-surface: hsla(196 100% 97.3% / 0.8);
     --md-sys-color-on-surface: hsl(196 0% 0.8%);
     --md-sys-color-border: hsla(196 0% 0.8% / var(--border-alpha));
@@ -82,8 +83,6 @@ body {
   font-family:
     Lilex, 'Droid Sans Mono', 'Fira Code', 'Fira Mono', 'JetBrains Mono',
     ui-monospace, monospace;
-  max-width: 70rem;
-  margin: auto;
 }
 
 a {
@@ -110,6 +109,7 @@ header {
   position: sticky;
   top: 0;
   padding: 1rem;
+  padding-inline: calc((100vw - var(--content-width)) / 2 + 1rem);
   transition: background-color 0.2s ease-out;
   z-index: 1;
   backdrop-filter: blur(128px);
@@ -161,6 +161,8 @@ main {
   transition:
     padding-left 0.1s ease-out,
     padding-right 0.1s ease-out;
+  max-width: var(--content-width);
+  margin: auto;
 }
 
 @media (width <= 80rem) {
