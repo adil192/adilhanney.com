@@ -1,15 +1,20 @@
 :root {
-  --md-sys-color-background: hsl(205 9% 11%);
-  --md-sys-color-surface: hsl(205 14% 14%);
-  --md-sys-color-on-surface: hsl(205 9% 89%);
-  --md-sys-color-border: hsl(205 9% 89% / var(--border-alpha));
+  --border-alpha: 0.15;
+  --border-radius: 1rem;
+  --section-padding: 1.5rem;
+}
+:root {
+  --md-sys-color-background: hsla(196 47.8% 4.5% / 0.65);
+  --md-sys-color-surface: hsla(196 21.3% 12% / 0.8);
+  --md-sys-color-on-surface: hsl(196 0% 100%);
+  --md-sys-color-border: hsla(196 0% 100% / var(--border-alpha));
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --md-sys-color-background: hsl(225 50% 95.7%);
-    --md-sys-color-surface: hsl(225 100% 99.2%);
-    --md-sys-color-on-surface: hsl(225 9% 11%);
-    --md-sys-color-border: hsl(225 100% 11% / var(--border-alpha));
+    --md-sys-color-background: hsla(196 25.3% 85.3% / 0.6);
+    --md-sys-color-surface: hsla(196 100% 97.3% / 0.8);
+    --md-sys-color-on-surface: hsl(196 0% 0.8%);
+    --md-sys-color-border: hsla(196 0% 0.8% / var(--border-alpha));
   }
 }
 @media (prefers-contrast: more) {
@@ -22,19 +27,6 @@
     filter: invert(1);
     filter: url('#invert-filter');
   }
-}
-
-:root {
-  --border-alpha: 0.15;
-  --border-radius: 1rem;
-
-  --section-padding: 1.5rem;
-
-  --scrollbar-color: color-mix(
-    in hsl,
-    var(--md-sys-color-on-surface) 50%,
-    var(--md-sys-color-background)
-  );
 }
 
 @font-face {
@@ -71,17 +63,25 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 7rem;
 }
+html::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  background:
+    linear-gradient(
+      var(--md-sys-color-background),
+      var(--md-sys-color-background)
+    ),
+    url('bg.webp') center center / 100vw 100vh #035f63 no-repeat !important;
+}
 
-html,
 body {
-  background: var(--md-sys-color-background);
   color: var(--md-sys-color-on-surface);
   font-family:
     Lilex, 'Droid Sans Mono', 'Fira Code', 'Fira Mono', 'JetBrains Mono',
     ui-monospace, monospace;
-}
-
-body {
   max-width: 70rem;
   margin: auto;
 }
@@ -110,8 +110,9 @@ header {
   position: sticky;
   top: 0;
   padding: 1rem;
-  background-color: var(--md-sys-color-background);
+  transition: background-color 0.2s ease-out;
   z-index: 1;
+  backdrop-filter: blur(128px);
 
   display: flex;
   flex-flow: row wrap;
@@ -132,12 +133,15 @@ header {
   .titles {
     grid-area: titles;
     align-self: center;
-    background-color: inherit;
     transform: translate(calc(-1 * var(--pfp-width) - 1rem), var(--pfp-width));
     transition: transform 0.2s ease-out;
   }
-  &.scrolled .titles {
-    transform: translate(0, 0);
+  &.scrolled {
+    background-color: var(--md-sys-color-background);
+
+    .titles {
+      transform: translate(0, 0);
+    }
   }
 
   & h1 + p {
@@ -150,7 +154,6 @@ header {
 }
 
 main {
-  scrollbar-color: var(--scrollbar-color) transparent;
   scrollbar-width: thin;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -320,9 +323,12 @@ section {
 
   &,
   & .MuiDialog-paper {
-    background: var(--md-sys-color-surface);
     color: var(--md-sys-color-on-surface);
     border-radius: var(--border-radius);
+  }
+  & .MuiDialog-paper {
+    background: var(--md-sys-color-surface);
+    backdrop-filter: blur(64px);
   }
 
   & .section-dialog-header {
