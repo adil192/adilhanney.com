@@ -75,7 +75,7 @@ html::before {
       var(--md-sys-color-background),
       var(--md-sys-color-background)
     ),
-    url('bg.webp') center center / 100vw 100vh #035f63 no-repeat !important;
+    url('/bg.webp') center center / 100vw 100vh #035f63 no-repeat !important;
 }
 
 body {
