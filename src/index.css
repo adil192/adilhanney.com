@@ -112,7 +112,6 @@ header {
   padding-inline: calc(max(0px, (100vw - var(--content-width)) / 2) + 1rem);
   transition: background-color 0.2s ease-out;
   z-index: 1;
-  backdrop-filter: blur(128px);
 
   display: flex;
   flex-flow: row wrap;
@@ -138,6 +137,7 @@ header {
   }
   &.scrolled {
     background-color: var(--md-sys-color-background);
+    backdrop-filter: blur(128px);
 
     .titles {
       transform: translate(0, 0);
