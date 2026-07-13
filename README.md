@@ -23,5 +23,5 @@ deno run dev
 ### Update dependencies
 
 ```bash
-deno update --latest
+deno update --latest --minimum-dependency-age P2D
 ```
