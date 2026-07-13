@@ -2,26 +2,26 @@
 
 This is the source code for my personal website using React + TypeScript + Vite.
 
-We use Bun as the package manager: see [the docs](https://bun.com/docs/installation) to install Bun.
+We use Deno as the package manager: see [the docs](https://deno.com/) to install Deno.
 
 ## Commands
 
 ### Build
 
 ```bash
-bun install
-bun run build
+deno install
+deno run build
 ```
 
 ### Develop
 
 ```bash
-bun install
-bun run dev
+deno install
+deno run dev
 ```
 
 ### Update dependencies
 
 ```bash
-bun update --latest
+deno update --latest
 ```

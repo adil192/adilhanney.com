@@ -26,9 +26,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
 
       - name: Restore cache
         uses: actions/cache@v5
@@ -36,18 +35,18 @@ jobs:
           path: |
             dist
             node_modules
-          key: bun-${{ hashFiles('package.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          key: deno-${{ hashFiles('package.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
-            bun-${{ hashFiles('package.json') }}-
+            deno-${{ hashFiles('package.json') }}-
 
       - name: Install dependencies
-        run: bun install
+        run: deno install
 
       - name: Preprocess Images
-        run: bun run preprocess_images
+        run: deno run preprocess_images
 
       - name: Build
-        run: bun run build
+        run: deno run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
