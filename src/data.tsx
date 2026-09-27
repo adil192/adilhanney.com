@@ -29,6 +29,65 @@ or
     date: undefined,
   },
   {
+    id: 'shatter-shell',
+    icon: (
+      <img
+        src="https://raw.githubusercontent.com/adil192/shatter-shell/refs/heads/master_resolute/icons/shatter-shell-auto-on-symbolic.svg"
+        alt=""
+        aria-hidden="true"
+        width={80}
+        height={80}
+        className="mock-mac-os-icon"
+      />
+    ),
+    header: 'Shatter Shell',
+    headerLink: 'https://github.com/adil192/shatter-shell',
+    technologies: [Technology.js],
+    content: `
+A continuation of Pop Shell,
+bringing tiling window management to the modern GNOME desktop.
+If you aren't familiar,
+tiling window management organizes your windows into a grid automatically,
+so you never have to try to find something in a mess of overlapping windows again.
+
+My fork brings several improvements with
+UIs ported to Adwaita (GNOME's design language),
+subtle fade transitions,
+slightly better performance,
+and many bug fixes.
+
+I also added automatic tiling exclusions for windows that are
+non-resizeable, non-moveable, or hidden from the taskbar,
+letting us rely less on a manually written whitelist to keep
+maximum compatibility.
+
+Safety and development experience were also worked on,
+leveraging proper Typescript definitions from the \`@girs\` npm packages,
+strict lints with ESLint,
+\`stylistic\` formatting,
+removing dynamic types,
+removing lots of unused code,
+and more.
+
+Shatter Shell presents a polished and maintained alternative to the
+beloved Pop Shell extension.
+Find installation instructions in the
+[README](https://github.com/adil192/shatter-shell?tab=readme-ov-file)
+and a summary of the changes in the
+[release notes](https://github.com/adil192/shatter-shell/releases).
+`,
+    date: 'September 2026',
+    images: [
+      <img
+        src="https://raw.githubusercontent.com/adil192/shatter-shell/refs/heads/master_resolute/screenshot.webp"
+        aria-hidden="true"
+        alt=""
+        width={1920}
+        height={1200}
+      />,
+    ]
+  },
+  {
     id: 'cosmic_qt',
     icon: (
       <img
